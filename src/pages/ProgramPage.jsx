@@ -100,12 +100,12 @@ export default function ProgramPage() {
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
 
         <div className="flex items-center gap-4 mb-8">
-          <Link to="/#programs" className="inline-flex items-center gap-2 text-sm font-medium" style={{ color: 'rgba(26,26,46,0.55)' }}>
+          <Link to="/#programs" className="inline-flex items-center gap-2 text-sm font-medium" style={{ color: 'rgba(0,0,0,0.45)' }}>
             <ArrowLeft size={15} /> Back to Guide
           </Link>
           <div className="flex gap-2">
             {programs.map(p => (
-              <Link key={p.id} to={`/programs/${p.id}`} className="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all" style={{ background: p.id === type ? 'linear-gradient(135deg, #1E3A5F, #2E5082)' : 'rgba(30,58,95,0.06)', color: p.id === type ? '#F8FAFC' : 'rgba(26,26,46,0.55)', border: p.id === type ? 'none' : '1px solid rgba(30,58,95,0.08)' }}>
+              <Link key={p.id} to={`/programs/${p.id}`} className="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all" style={{ background: p.id === type ? 'linear-gradient(135deg, #0A0A0A, #333333)' : 'rgba(0,0,0,0.03)', color: p.id === type ? '#F8FAFC' : 'rgba(0,0,0,0.45)', border: p.id === type ? 'none' : '1px solid rgba(0,0,0,0.04)' }}>
                 {p.label}
               </Link>
             ))}
@@ -116,20 +116,20 @@ export default function ProgramPage() {
           <div className="chip inline-flex mb-4" style={{ background: prog.tagBg, color: prog.tagColor, border: `1px solid ${prog.tagColor}25` }}>
             {prog.label} in Germany — Deep Dive
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.03em', color: '#0A0A0A' }}>
             {prog.label} Degree Guide —<br />
             <span className="text-gold-gradient">Applications, Strategy & Tips</span>
           </h1>
-          <p className="text-base leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>{prog.intro}</p>
+          <p className="text-base leading-relaxed" style={{ color: 'rgba(0,0,0,0.5)' }}>{prog.intro}</p>
         </motion.div>
 
         {/* Key facts */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="glass rounded-2xl p-6 mb-8">
-          <h2 className="text-lg font-bold text-[#1A1A2E] mb-5 text-xs uppercase tracking-widest" style={{ color: 'rgba(26,26,46,0.45)' }}>At a Glance</h2>
+          <h2 className="text-lg font-bold text-[#1A1A2E] mb-5 text-xs uppercase tracking-widest" style={{ color: 'rgba(0,0,0,0.38)' }}>At a Glance</h2>
           <div className="grid md:grid-cols-2 gap-3">
             {prog.keyPoints.map((kp, i) => (
-              <div key={i} className="flex items-start justify-between py-2.5 px-3 rounded-xl" style={{ background: 'rgba(30,58,95,0.02)' }}>
-                <span className="text-sm" style={{ color: 'rgba(26,26,46,0.55)' }}>{kp.label}</span>
+              <div key={i} className="flex items-start justify-between py-2.5 px-3 rounded-xl" style={{ background: 'rgba(0,0,0,0.02)' }}>
+                <span className="text-sm" style={{ color: 'rgba(0,0,0,0.45)' }}>{kp.label}</span>
                 <span className="text-sm font-bold" style={{ color: prog.tagColor }}>{kp.value}</span>
               </div>
             ))}
@@ -147,11 +147,11 @@ export default function ProgramPage() {
                 <div className="w-5 h-5 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0" style={{ background: `${prog.tagColor}15`, border: `1px solid ${prog.tagColor}30` }}>
                   <div className="w-1.5 h-1.5 rounded-full" style={{ background: prog.tagColor }} />
                 </div>
-                <span className="text-sm" style={{ color: 'rgba(26,26,46,0.75)' }}>{req}</span>
+                <span className="text-sm" style={{ color: 'rgba(0,0,0,0.65)' }}>{req}</span>
               </div>
             ))}
           </div>
-          <div className="mt-6 p-4 rounded-xl text-sm" style={{ background: `${prog.tagColor}08`, border: `1px solid ${prog.tagColor}20`, color: 'rgba(26,26,46,0.75)' }}>
+          <div className="mt-6 p-4 rounded-xl text-sm" style={{ background: `${prog.tagColor}08`, border: `1px solid ${prog.tagColor}20`, color: 'rgba(0,0,0,0.65)' }}>
             {prog.note}
           </div>
         </motion.div>
@@ -169,7 +169,7 @@ export default function ProgramPage() {
                 </div>
                 <div>
                   <div className="font-semibold text-white text-sm mb-1">{t.phase}</div>
-                  <div className="text-xs" style={{ color: 'rgba(26,26,46,0.55)' }}>{t.tip}</div>
+                  <div className="text-xs" style={{ color: 'rgba(0,0,0,0.45)' }}>{t.tip}</div>
                 </div>
               </div>
             ))}
@@ -183,9 +183,9 @@ export default function ProgramPage() {
           </h2>
           <div className="space-y-3">
             {guide.portals.map((p, i) => (
-              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(30,58,95,0.02)', border: '1px solid rgba(30,58,95,0.06)' }}>
+              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.03)' }}>
                 <div className="font-bold text-[#1A1A2E] mb-1">{p.name}</div>
-                <div className="text-sm" style={{ color: 'rgba(26,26,46,0.55)' }}>{p.desc}</div>
+                <div className="text-sm" style={{ color: 'rgba(0,0,0,0.45)' }}>{p.desc}</div>
               </div>
             ))}
           </div>
@@ -200,7 +200,7 @@ export default function ProgramPage() {
             {guide.sopTips.map((tip, i) => (
               <div key={i} className="flex items-start gap-3">
                 <ChevronRight size={14} color={prog.tagColor} className="flex-shrink-0 mt-0.5" />
-                <p className="text-sm" style={{ color: 'rgba(26,26,46,0.7)' }}>{tip}</p>
+                <p className="text-sm" style={{ color: 'rgba(0,0,0,0.6)' }}>{tip}</p>
               </div>
             ))}
           </div>
@@ -210,7 +210,7 @@ export default function ProgramPage() {
         {guide.extras.map((extra, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.33 + i * 0.05 }} className="glass rounded-2xl p-7 mb-6">
             <h3 className="font-bold text-[#1A1A2E] mb-3">{extra.title}</h3>
-            <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.65)' }}>{extra.desc}</p>
+            <p className="text-sm leading-relaxed" style={{ color: 'rgba(0,0,0,0.55)' }}>{extra.desc}</p>
           </motion.div>
         ))}
 
@@ -227,14 +227,14 @@ export default function ProgramPage() {
         </motion.div>
 
         {/* Next steps */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(45,106,79,0.08), rgba(91,140,255,0.05))', border: '1px solid rgba(30,58,95,0.12)' }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.03), rgba(91,140,255,0.05))', border: '1px solid #E8E8E8' }}>
           <h3 className="text-xl font-bold text-[#1A1A2E] mb-2">Once you're ready — apply for the APS Certificate first</h3>
-          <p className="text-sm mb-6" style={{ color: 'rgba(26,26,46,0.55)' }}>Every German university requires the APS certificate. Start this process before anything else.</p>
+          <p className="text-sm mb-6" style={{ color: 'rgba(0,0,0,0.45)' }}>Every German university requires the APS certificate. Start this process before anything else.</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/aps" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF' }}>
+            <Link to="/aps" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: '#0A0A0A', color: '#FFFFFF' }}>
               APS Certificate Guide →
             </Link>
-            <Link to="/universities/tum" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'rgba(30,58,95,0.06)', color: '#1A1A2E', border: '1px solid rgba(30,58,95,0.08)' }}>
+            <Link to="/universities/tum" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'rgba(0,0,0,0.03)', color: '#0A0A0A', border: '1px solid #EEEEEE' }}>
               Explore Universities →
             </Link>
           </div>

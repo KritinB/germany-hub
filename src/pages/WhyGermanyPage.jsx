@@ -63,17 +63,17 @@ export default function WhyGermanyPage() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
 
-        <Link to="/#why" className="inline-flex items-center gap-2 mb-8 text-sm font-medium" style={{ color: 'rgba(26,26,46,0.55)' }}>
+        <Link to="/#why" className="inline-flex items-center gap-2 mb-8 text-sm font-medium" style={{ color: 'rgba(0,0,0,0.45)' }}>
           <ArrowLeft size={15} /> Back to Guide
         </Link>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-12">
           <div className="chip chip-gold inline-flex mb-4">Why Germany — Deep Dive</div>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.03em', color: '#0A0A0A' }}>
             Why Germany is the<br />
             <span className="text-gold-gradient">Best Choice for Indians</span>
           </h1>
-          <p className="text-base leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>
+          <p className="text-base leading-relaxed" style={{ color: 'rgba(0,0,0,0.5)' }}>
             Data-backed reasons, country comparisons, salary expectations, and in-depth analysis of why
             40,000+ Indian students choose Germany every year.
           </p>
@@ -85,7 +85,7 @@ export default function WhyGermanyPage() {
             <div key={i} className="glass rounded-2xl p-5 text-center">
               <div className="text-3xl font-extrabold text-gold-gradient mb-1">{s.value}</div>
               <div className="text-sm font-semibold text-[#1A1A2E] mb-1">{s.label}</div>
-              <div className="text-xs" style={{ color: 'rgba(26,26,46,0.45)' }}>{s.sub}</div>
+              <div className="text-xs" style={{ color: 'rgba(0,0,0,0.38)' }}>{s.sub}</div>
             </div>
           ))}
         </motion.div>
@@ -113,7 +113,7 @@ export default function WhyGermanyPage() {
                   <h2 className="text-xl font-bold text-[#1A1A2E]">{r.title}</h2>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(26,26,46,0.65)' }}>{extra?.detail || r.desc}</p>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(0,0,0,0.55)' }}>{extra?.detail || r.desc}</p>
               {extra?.stats && (
                 <div className="flex flex-wrap gap-2">
                   {extra.stats.map((stat, j) => (
@@ -130,12 +130,12 @@ export default function WhyGermanyPage() {
         {/* Country comparison */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass rounded-2xl p-8 mb-10">
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-            <Globe2 size={20} color="#1E3A5F" /> Germany vs Other Study Destinations
+            <Globe2 size={20} color="#0A0A0A" /> Germany vs Other Study Destinations
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr style={{ color: 'rgba(26,26,46,0.4)' }} className="text-xs uppercase tracking-wider">
+                <tr style={{ color: 'rgba(0,0,0,0.35)' }} className="text-xs uppercase tracking-wider">
                   <th className="text-left pb-4 pr-4">Country</th>
                   <th className="text-left pb-4 px-2">Tuition/Year</th>
                   <th className="text-left pb-4 px-2">Post-Study Visa</th>
@@ -144,11 +144,11 @@ export default function WhyGermanyPage() {
               </thead>
               <tbody>
                 {comparison.map((c, i) => (
-                  <tr key={i} style={{ borderTop: '1px solid rgba(30,58,95,0.04)' }}>
+                  <tr key={i} style={{ borderTop: '1px solid rgba(0,0,0,0.02)' }}>
                     <td className="py-3 pr-4 font-semibold text-white">{c.country}</td>
-                    <td className="py-3 px-2 text-xs font-mono" style={{ color: c.overall === 'best' ? '#2D6A4F' : c.overall === 'expensive' ? '#F472B6' : 'rgba(26,26,46,0.6)' }}>{c.tuition}</td>
-                    <td className="py-3 px-2 text-xs" style={{ color: 'rgba(26,26,46,0.6)' }}>{c.postStudyVisa}</td>
-                    <td className="py-3 px-2 text-xs hidden md:table-cell" style={{ color: 'rgba(26,26,46,0.6)' }}>{c.avgSalary}</td>
+                    <td className="py-3 px-2 text-xs font-mono" style={{ color: c.overall === 'best' ? '#444444' : c.overall === 'expensive' ? '#F472B6' : 'rgba(0,0,0,0.5)' }}>{c.tuition}</td>
+                    <td className="py-3 px-2 text-xs" style={{ color: 'rgba(0,0,0,0.5)' }}>{c.postStudyVisa}</td>
+                    <td className="py-3 px-2 text-xs hidden md:table-cell" style={{ color: 'rgba(0,0,0,0.5)' }}>{c.avgSalary}</td>
                   </tr>
                 ))}
               </tbody>
@@ -159,13 +159,13 @@ export default function WhyGermanyPage() {
         {/* Salary data */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="glass rounded-2xl p-8 mb-10">
           <h2 className="text-2xl font-bold text-white mb-2 flex items-center gap-2">
-            <BarChart2 size={20} color="#1E3A5F" /> Graduate Salaries in Germany (Gross)
+            <BarChart2 size={20} color="#0A0A0A" /> Graduate Salaries in Germany (Gross)
           </h2>
-          <p className="text-sm mb-6" style={{ color: 'rgba(26,26,46,0.45)' }}>After tax (Netto), expect approximately 60–65% of these figures.</p>
+          <p className="text-sm mb-6" style={{ color: 'rgba(0,0,0,0.38)' }}>After tax (Netto), expect approximately 60–65% of these figures.</p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr style={{ color: 'rgba(26,26,46,0.4)' }} className="text-xs uppercase tracking-wider">
+                <tr style={{ color: 'rgba(0,0,0,0.35)' }} className="text-xs uppercase tracking-wider">
                   <th className="text-left pb-4 pr-4">Field</th>
                   <th className="text-center pb-4 px-2">Entry Level</th>
                   <th className="text-center pb-4 px-2">Mid Level</th>
@@ -174,11 +174,11 @@ export default function WhyGermanyPage() {
               </thead>
               <tbody>
                 {salaryData.map((s, i) => (
-                  <tr key={i} style={{ borderTop: '1px solid rgba(30,58,95,0.04)' }}>
+                  <tr key={i} style={{ borderTop: '1px solid rgba(0,0,0,0.02)' }}>
                     <td className="py-3 pr-4 font-semibold text-white">{s.field}</td>
-                    <td className="py-3 px-2 text-center text-xs font-mono" style={{ color: 'rgba(26,26,46,0.6)' }}>{s.entry}</td>
-                    <td className="py-3 px-2 text-center text-xs font-mono" style={{ color: '#1E3A5F' }}>{s.mid}</td>
-                    <td className="py-3 text-center text-xs font-mono" style={{ color: '#2D6A4F' }}>{s.senior}</td>
+                    <td className="py-3 px-2 text-center text-xs font-mono" style={{ color: 'rgba(0,0,0,0.5)' }}>{s.entry}</td>
+                    <td className="py-3 px-2 text-center text-xs font-mono" style={{ color: '#0A0A0A' }}>{s.mid}</td>
+                    <td className="py-3 text-center text-xs font-mono" style={{ color: '#444444' }}>{s.senior}</td>
                   </tr>
                 ))}
               </tbody>
@@ -187,10 +187,10 @@ export default function WhyGermanyPage() {
         </motion.div>
 
         {/* Next step */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(45,106,79,0.08), rgba(91,140,255,0.05))', border: '1px solid rgba(30,58,95,0.12)' }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.03), rgba(91,140,255,0.05))', border: '1px solid #E8E8E8' }}>
           <h3 className="text-xl font-bold text-[#1A1A2E] mb-2">Convinced? Start with the APS Certificate</h3>
-          <p className="text-sm mb-6" style={{ color: 'rgba(26,26,46,0.55)' }}>It's the mandatory first step — start 3–4 months before your application deadline.</p>
-          <Link to="/aps" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF' }}>
+          <p className="text-sm mb-6" style={{ color: 'rgba(0,0,0,0.45)' }}>It's the mandatory first step — start 3–4 months before your application deadline.</p>
+          <Link to="/aps" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: '#0A0A0A', color: '#FFFFFF' }}>
             APS Certificate Guide →
           </Link>
         </motion.div>

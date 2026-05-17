@@ -8,24 +8,16 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
-        bg: '#F8FAFC',
+        bg: '#FFFFFF',
+        'bg-alt': '#F7F7F7',
         surface: '#FFFFFF',
-        elevated: '#F1F5F9',
-        navy: {
-          DEFAULT: '#1E3A5F',
-          light: '#2E5082',
-          dark: '#162B47',
-        },
-        green: {
-          accent: '#2D6A4F',
-          light: '#3D8C6A',
-          dim: '#1F4E39',
-        },
-        border: 'rgba(30,58,95,0.1)',
+        border: '#E8E8E8',
+        ink: '#0A0A0A',
+        muted: '#666666',
+        subtle: '#999999',
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-glow': 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(30,58,95,0.08) 0%, transparent 70%)',
+      borderRadius: {
+        pill: '100px',
       },
       animation: {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',

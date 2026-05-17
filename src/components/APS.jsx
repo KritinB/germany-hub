@@ -88,11 +88,11 @@ export default function APS() {
           className="text-center mb-5"
         >
           <div className="chip chip-gold inline-flex mb-5">APS Certificate</div>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.03em', color: '#0A0A0A' }}>
             The mandatory first step —<br />
             <span className="text-gold-gradient">APS Certificate</span>
           </h2>
-          <p className="text-base max-w-2xl mx-auto" style={{ color: 'rgba(26,26,46,0.55)' }}>
+          <p className="text-base max-w-2xl mx-auto" style={{ color: 'rgba(0,0,0,0.45)' }}>
             Since 2019, ALL Indian students applying to German universities must obtain an APS
             (Akademische Prüfstelle) certificate. It verifies your academic credentials and is
             a non-negotiable prerequisite for admission.
@@ -106,10 +106,10 @@ export default function APS() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-3xl mx-auto mb-14 rounded-2xl p-5 flex gap-4"
-          style={{ background: 'rgba(45,106,79,0.08)', border: '1px solid rgba(30,58,95,0.18)' }}
+          style={{ background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.08)' }}
         >
-          <AlertCircle size={20} color="#1E3A5F" className="flex-shrink-0 mt-0.5" />
-          <div className="text-sm" style={{ color: 'rgba(26,26,46,0.8)' }}>
+          <AlertCircle size={20} color="#0A0A0A" className="flex-shrink-0 mt-0.5" />
+          <div className="text-sm" style={{ color: 'rgba(0,0,0,0.7)' }}>
             <span className="font-bold text-[#1A1A2E]">Start the APS process 3–4 months before your application deadline.</span>{' '}
             Processing takes 4–8 weeks, and German universities will not review your application without a valid APS certificate.
             Do not wait until the last minute.
@@ -140,12 +140,12 @@ export default function APS() {
                 transition={{ delay: i * 0.1 }}
                 className="glass rounded-2xl p-5 text-center hover-card cursor-default"
               >
-                <div className="w-10 h-10 rounded-xl mx-auto mb-3 flex items-center justify-center" style={{ background: 'rgba(30,58,95,0.08)', border: '1px solid rgba(30,58,95,0.18)' }}>
-                  <Icon size={18} color="#1E3A5F" />
+                <div className="w-10 h-10 rounded-xl mx-auto mb-3 flex items-center justify-center" style={{ background: 'rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.08)' }}>
+                  <Icon size={18} color="#0A0A0A" />
                 </div>
-                <div className="text-xs font-medium mb-1" style={{ color: 'rgba(26,26,46,0.45)' }}>{f.label}</div>
+                <div className="text-xs font-medium mb-1" style={{ color: 'rgba(0,0,0,0.38)' }}>{f.label}</div>
                 <div className="text-xl font-extrabold text-gold-gradient">{f.value}</div>
-                <div className="text-xs mt-1" style={{ color: 'rgba(26,26,46,0.45)' }}>{f.sub}</div>
+                <div className="text-xs mt-1" style={{ color: 'rgba(0,0,0,0.38)' }}>{f.sub}</div>
               </motion.div>
             )
           })}
@@ -166,18 +166,18 @@ export default function APS() {
                 <div className="flex-shrink-0">
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center font-mono font-bold text-xs"
-                    style={{ background: 'rgba(30,58,95,0.08)', border: '1px solid rgba(30,58,95,0.2)', color: '#1E3A5F' }}
+                    style={{ background: 'rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.1)', color: '#0A0A0A' }}
                   >
                     {step.num}
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-bold text-[#1A1A2E] mb-2">{step.title}</h3>
-                  <p className="text-sm mb-4 leading-relaxed" style={{ color: 'rgba(26,26,46,0.55)' }}>{step.desc}</p>
+                  <p className="text-sm mb-4 leading-relaxed" style={{ color: 'rgba(0,0,0,0.45)' }}>{step.desc}</p>
                   <div className="space-y-1.5">
                     {step.details.map((d, j) => (
-                      <div key={j} className="flex items-center gap-2 text-xs" style={{ color: 'rgba(26,26,46,0.6)' }}>
-                        <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#1E3A5F' }} />
+                      <div key={j} className="flex items-center gap-2 text-xs" style={{ color: 'rgba(0,0,0,0.5)' }}>
+                        <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#0A0A0A' }} />
                         {d}
                       </div>
                     ))}
@@ -203,20 +203,20 @@ export default function APS() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-all"
-              style={{ color: '#1E3A5F', background: 'rgba(30,58,95,0.08)', border: '1px solid rgba(30,58,95,0.18)' }}
+              style={{ color: '#0A0A0A', background: 'rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.08)' }}
             >
               Official Site <ExternalLink size={11} />
             </a>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {offices.map((o, i) => (
-              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(30,58,95,0.02)', border: '1px solid rgba(30,58,95,0.06)' }}>
+              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.03)' }}>
                 <div className="flex items-center gap-2 mb-2">
-                  <MapPin size={14} color="#1E3A5F" />
+                  <MapPin size={14} color="#0A0A0A" />
                   <span className="font-semibold text-white text-sm">{o.city}</span>
                 </div>
-                <p className="text-xs mb-2" style={{ color: 'rgba(26,26,46,0.5)' }}>{o.address}</p>
-                <div className="text-xs px-2 py-1 rounded-md" style={{ background: 'rgba(45,106,79,0.08)', color: '#1E3A5F' }}>{o.note}</div>
+                <p className="text-xs mb-2" style={{ color: 'rgba(0,0,0,0.4)' }}>{o.address}</p>
+                <div className="text-xs px-2 py-1 rounded-md" style={{ background: 'rgba(0,0,0,0.03)', color: '#0A0A0A' }}>{o.note}</div>
               </div>
             ))}
           </div>
@@ -233,7 +233,7 @@ export default function APS() {
           <Link
             to="/aps"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-            style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(30,58,95,0.25)' }}
+            style={{ background: '#0A0A0A', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
           >
             Full APS Guide — FAQs, Tips & Timeline <ArrowRight size={15} />
           </Link>

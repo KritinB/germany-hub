@@ -3,15 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --bg: #F8FAFC;
+  --bg: #FFFFFF;
+  --bg-alt: #F7F7F7;
   --surface: #FFFFFF;
-  --elevated: #F1F5F9;
-  --border: rgba(30, 58, 95, 0.1);
-  --navy: #1E3A5F;
-  --navy-light: #2E5082;
-  --green: #2D6A4F;
-  --text: #1A1A2E;
-  --text-muted: rgba(26, 26, 46, 0.55);
+  --border: #E8E8E8;
+  --text: #0A0A0A;
+  --text-muted: #666666;
+  --text-subtle: #999999;
 }
 
 * {
@@ -33,58 +31,27 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
+::-webkit-scrollbar-track { background: #F7F7F7; }
+::-webkit-scrollbar-thumb { background: #CCCCCC; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #AAAAAA; }
 
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(30, 58, 95, 0.2);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(30, 58, 95, 0.35);
-}
-
-/* Card utility */
-.card {
+/* Card */
+.glass, .card {
   background: #FFFFFF;
-  border: 1px solid rgba(30, 58, 95, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #E8E8E8;
 }
 
-.card-elevated {
+.glass-elevated, .card-elevated {
   background: #FFFFFF;
-  border: 1px solid rgba(30, 58, 95, 0.12);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
 }
 
-/* For backwards compatibility with existing glass class */
-.glass {
-  background: #FFFFFF;
-  border: 1px solid rgba(30, 58, 95, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.glass-elevated {
-  background: #FFFFFF;
-  border: 1px solid rgba(30, 58, 95, 0.12);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-}
-
-/* Navy gradient text */
-.text-gold-gradient {
-  background: linear-gradient(135deg, #1E3A5F 0%, #2E5082 60%, #2D6A4F 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-navy-gradient {
-  background: linear-gradient(135deg, #1E3A5F 0%, #2E5082 60%, #2D6A4F 100%);
+/* Gradient text — subtle dark */
+.text-gold-gradient, .text-navy-gradient {
+  background: linear-gradient(135deg, #0A0A0A 0%, #444444 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,91 +64,71 @@ body {
   z-index: 1;
 }
 
-/* Step connector line */
+.section-alt {
+  background: #F7F7F7;
+}
+
+/* Step connector */
 .step-connector {
   position: absolute;
   left: 20px;
   top: 44px;
   bottom: -20px;
   width: 1px;
-  background: linear-gradient(to bottom, rgba(30, 58, 95, 0.3), transparent);
+  background: linear-gradient(to bottom, #CCCCCC, transparent);
 }
 
-/* Tag chip */
+/* Chip */
 .chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 4px 12px;
   border-radius: 100px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.chip-gold {
-  background: rgba(30, 58, 95, 0.08);
-  color: #1E3A5F;
-  border: 1px solid rgba(30, 58, 95, 0.18);
-}
-
-.chip-navy {
-  background: rgba(30, 58, 95, 0.08);
-  color: #1E3A5F;
-  border: 1px solid rgba(30, 58, 95, 0.18);
-}
-
-.chip-blue {
-  background: rgba(30, 58, 95, 0.08);
-  color: #1E3A5F;
-  border: 1px solid rgba(30, 58, 95, 0.18);
+.chip-gold, .chip-navy, .chip-blue {
+  background: #F0F0F0;
+  color: #555555;
+  border: 1px solid #E0E0E0;
 }
 
 .chip-green {
-  background: rgba(45, 106, 79, 0.08);
-  color: #2D6A4F;
-  border: 1px solid rgba(45, 106, 79, 0.2);
+  background: #F0F0F0;
+  color: #555555;
+  border: 1px solid #E0E0E0;
 }
 
 .chip-teal {
-  background: rgba(10, 95, 115, 0.08);
-  color: #0A5F73;
-  border: 1px solid rgba(10, 95, 115, 0.2);
+  background: #F0F0F0;
+  color: #555555;
+  border: 1px solid #E0E0E0;
 }
 
-/* Glow effects */
-.glow-gold {
-  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.15);
-}
-
-.glow-blue {
-  box-shadow: 0 4px 20px rgba(45, 106, 79, 0.15);
-}
-
-/* Hover card effect */
+/* Hover card */
 .hover-card {
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.3s ease,
-              border-color 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
-
 .hover-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(30, 58, 95, 0.2) !important;
-  box-shadow: 0 8px 24px rgba(30, 58, 95, 0.1) !important;
+  transform: translateY(-2px);
+  border-color: #CCCCCC !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08) !important;
 }
 
 /* Divider */
 .divider {
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(30, 58, 95, 0.1), transparent);
+  background: #EEEEEE;
 }
 
-/* Active tab indicator */
+/* Tab active */
 .tab-active {
-  color: var(--navy);
-  border-bottom: 2px solid var(--navy);
+  color: #0A0A0A;
+  border-bottom: 2px solid #0A0A0A;
 }
 
 /* Number badge */
@@ -194,24 +141,54 @@ body {
   justify-content: center;
   font-size: 14px;
   font-weight: 700;
-  background: rgba(30, 58, 95, 0.08);
-  border: 1px solid rgba(30, 58, 95, 0.2);
-  color: var(--navy);
+  background: #0A0A0A;
+  color: #FFFFFF;
   flex-shrink: 0;
 }
 
-/* Section alternate backgrounds */
-.section-alt {
-  background: #F1F5F9;
+/* Category label (small uppercase above headings) */
+.category-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999999;
 }
+
+/* Pill button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  background: #0A0A0A;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  background: transparent;
+  color: #0A0A0A;
+  border: 1px solid #CCCCCC;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.btn-secondary:hover { border-color: #0A0A0A; transform: translateY(-1px); }
 
 @keyframes shimmer {
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
-}
-
-.shimmer {
-  background: linear-gradient(90deg, transparent 30%, rgba(30,58,95,0.03) 50%, transparent 70%);
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
 }

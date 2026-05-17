@@ -24,7 +24,7 @@ import ScholarshipsPage from './pages/ScholarshipsPage'
 
 function HomePage() {
   return (
-    <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
+    <div style={{ background: '#FFFFFF', minHeight: '100vh' }}>
       <Navbar />
       <Hero />
       <div className="divider" />

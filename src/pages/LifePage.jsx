@@ -33,7 +33,7 @@ const moreCities = [
     emoji: '⛪',
     vibe: 'Media & creative industries',
     costLevel: 'Medium',
-    costColor: '#1E3A5F',
+    costColor: '#0A0A0A',
     pros: ['Large, vibrant city', 'Strong media & creative sector', 'Famous Kölner Dom', 'Close to Belgium & Netherlands'],
     cons: ['Heavy traffic', 'High crime in some areas'],
     avgRent: '€600–950',
@@ -44,7 +44,7 @@ const moreCities = [
     emoji: '🔬',
     vibe: 'University town, optics & research',
     costLevel: 'Low',
-    costColor: '#2D6A4F',
+    costColor: '#444444',
     pros: ['Very affordable', 'Friedrich Schiller University (top research)', 'Zeiss, Schott headquarters', 'Walkable city'],
     cons: ['Very small city', 'Limited Indian community'],
     avgRent: '€250–450',
@@ -56,19 +56,19 @@ const housingTips = [
     title: 'Start Your Housing Search Early',
     desc: 'German student housing is competitive. Begin your search 3–4 months before your semester start. Studentenwerk waitlists can take 2+ semesters.',
     icon: Search,
-    color: '#1E3A5F',
+    color: '#0A0A0A',
   },
   {
     title: 'Studentenwohnheim (Student Dorm)',
     desc: 'Cheapest option (€150–350/month) run by Studentenwerk. Apply as early as possible — often waitlisted. Perfect for first semester.',
     icon: Home,
-    color: '#1E3A5F',
+    color: '#0A0A0A',
   },
   {
     title: 'WG (Wohngemeinschaft / Flatshare)',
     desc: 'Most popular option. Cost: €300–700/room. Search on WG-Gesucht.de. Write a personal intro in German/English for better response rates.',
     icon: Heart,
-    color: '#2D6A4F',
+    color: '#444444',
   },
   {
     title: 'Wohnungsgeberbestätigung',
@@ -102,17 +102,17 @@ export default function LifePage() {
 
       <div className="max-w-5xl mx-auto px-6 pt-28 pb-20">
 
-        <Link to="/#life" className="inline-flex items-center gap-2 mb-8 text-sm font-medium" style={{ color: 'rgba(26,26,46,0.55)' }}>
+        <Link to="/#life" className="inline-flex items-center gap-2 mb-8 text-sm font-medium" style={{ color: 'rgba(0,0,0,0.45)' }}>
           <ArrowLeft size={15} /> Back to Guide
         </Link>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-12">
           <div className="chip chip-green inline-flex mb-4">Life in Germany — Deep Dive</div>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.03em', color: '#0A0A0A' }}>
             Living in Germany —<br />
             <span className="text-gold-gradient">Everything You Need to Know</span>
           </h1>
-          <p className="text-base leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>
+          <p className="text-base leading-relaxed" style={{ color: 'rgba(0,0,0,0.5)' }}>
             City comparisons, housing tips, cultural norms, Indian community resources, and a complete guide
             to settling into life in Germany as an Indian student.
           </p>
@@ -128,33 +128,33 @@ export default function LifePage() {
                   <span className="text-3xl">{city.emoji}</span>
                   <div>
                     <h3 className="font-bold text-[#1A1A2E] text-lg">{city.name}</h3>
-                    <div className="text-xs" style={{ color: 'rgba(26,26,46,0.45)' }}>{city.state}</div>
+                    <div className="text-xs" style={{ color: 'rgba(0,0,0,0.38)' }}>{city.state}</div>
                     <div className="chip mt-1 inline-flex text-[10px] px-2 py-0.5" style={{ background: `${city.costColor}12`, color: city.costColor, border: `1px solid ${city.costColor}25` }}>
                       Cost: {city.costLevel}
                     </div>
                   </div>
                 </div>
-                <p className="text-xs mb-4 italic" style={{ color: 'rgba(26,26,46,0.55)' }}>{city.vibe}</p>
+                <p className="text-xs mb-4 italic" style={{ color: 'rgba(0,0,0,0.45)' }}>{city.vibe}</p>
                 <div className="grid grid-cols-2 gap-4 mb-3">
                   <div>
-                    <div className="text-xs font-semibold mb-2" style={{ color: 'rgba(26,26,46,0.4)' }}>HIGHLIGHTS</div>
+                    <div className="text-xs font-semibold mb-2" style={{ color: 'rgba(0,0,0,0.35)' }}>HIGHLIGHTS</div>
                     {city.pros.map((p, j) => (
-                      <div key={j} className="flex items-center gap-1.5 text-xs mb-1" style={{ color: 'rgba(26,26,46,0.65)' }}>
-                        <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#2D6A4F' }} />{p}
+                      <div key={j} className="flex items-center gap-1.5 text-xs mb-1" style={{ color: 'rgba(0,0,0,0.55)' }}>
+                        <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#444444' }} />{p}
                       </div>
                     ))}
                   </div>
                   <div>
-                    <div className="text-xs font-semibold mb-2" style={{ color: 'rgba(26,26,46,0.4)' }}>DOWNSIDES</div>
+                    <div className="text-xs font-semibold mb-2" style={{ color: 'rgba(0,0,0,0.35)' }}>DOWNSIDES</div>
                     {city.cons.map((c, j) => (
-                      <div key={j} className="flex items-center gap-1.5 text-xs mb-1" style={{ color: 'rgba(26,26,46,0.45)' }}>
+                      <div key={j} className="flex items-center gap-1.5 text-xs mb-1" style={{ color: 'rgba(0,0,0,0.38)' }}>
                         <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#F472B6' }} />{c}
                       </div>
                     ))}
                   </div>
                 </div>
-                <div className="pt-3" style={{ borderTop: '1px solid rgba(30,58,95,0.04)' }}>
-                  <span className="text-xs" style={{ color: 'rgba(26,26,46,0.4)' }}>Avg 1BR Rent: </span>
+                <div className="pt-3" style={{ borderTop: '1px solid rgba(0,0,0,0.02)' }}>
+                  <span className="text-xs" style={{ color: 'rgba(0,0,0,0.35)' }}>Avg 1BR Rent: </span>
                   <span className="text-xs font-bold" style={{ color: city.costColor }}>{city.avgRent}</span>
                 </div>
               </div>
@@ -172,22 +172,22 @@ export default function LifePage() {
                   <span className="text-3xl">{city.emoji}</span>
                   <div>
                     <h3 className="font-bold text-[#1A1A2E] text-lg">{city.name}</h3>
-                    <div className="text-xs" style={{ color: 'rgba(26,26,46,0.45)' }}>{city.state}</div>
+                    <div className="text-xs" style={{ color: 'rgba(0,0,0,0.38)' }}>{city.state}</div>
                     <div className="chip mt-1 inline-flex text-[10px] px-2 py-0.5" style={{ background: `${city.costColor}12`, color: city.costColor, border: `1px solid ${city.costColor}25` }}>
                       Cost: {city.costLevel}
                     </div>
                   </div>
                 </div>
-                <p className="text-xs mb-3 italic" style={{ color: 'rgba(26,26,46,0.55)' }}>{city.vibe}</p>
+                <p className="text-xs mb-3 italic" style={{ color: 'rgba(0,0,0,0.45)' }}>{city.vibe}</p>
                 <div className="space-y-1 mb-3">
                   {city.pros.slice(0, 3).map((p, j) => (
-                    <div key={j} className="flex items-center gap-1.5 text-xs" style={{ color: 'rgba(26,26,46,0.65)' }}>
-                      <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#2D6A4F' }} />{p}
+                    <div key={j} className="flex items-center gap-1.5 text-xs" style={{ color: 'rgba(0,0,0,0.55)' }}>
+                      <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: '#444444' }} />{p}
                     </div>
                   ))}
                 </div>
-                <div className="pt-2" style={{ borderTop: '1px solid rgba(30,58,95,0.04)' }}>
-                  <span className="text-xs" style={{ color: 'rgba(26,26,46,0.4)' }}>Avg 1BR Rent: </span>
+                <div className="pt-2" style={{ borderTop: '1px solid rgba(0,0,0,0.02)' }}>
+                  <span className="text-xs" style={{ color: 'rgba(0,0,0,0.35)' }}>Avg 1BR Rent: </span>
                   <span className="text-xs font-bold" style={{ color: city.costColor }}>{city.avgRent}</span>
                 </div>
               </div>
@@ -207,7 +207,7 @@ export default function LifePage() {
                     <Icon size={18} color={tip.color} />
                   </div>
                   <h3 className="font-bold text-[#1A1A2E] mb-2">{tip.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>{tip.desc}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(0,0,0,0.5)' }}>{tip.desc}</p>
                 </div>
               )
             })}
@@ -220,9 +220,9 @@ export default function LifePage() {
                 { site: 'Studentenwerk.de', desc: 'Official student dorms — cheapest option, long waitlists' },
                 { site: 'ImmobilienScout24.de', desc: 'Full apartments — more expensive, better for couples' },
               ].map((s, i) => (
-                <div key={i} className="rounded-xl p-3" style={{ background: 'rgba(30,58,95,0.02)', border: '1px solid rgba(30,58,95,0.06)' }}>
+                <div key={i} className="rounded-xl p-3" style={{ background: 'rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.03)' }}>
                   <div className="font-semibold text-white text-sm mb-1">{s.site}</div>
-                  <div className="text-xs" style={{ color: 'rgba(26,26,46,0.5)' }}>{s.desc}</div>
+                  <div className="text-xs" style={{ color: 'rgba(0,0,0,0.4)' }}>{s.desc}</div>
                 </div>
               ))}
             </div>
@@ -241,7 +241,7 @@ export default function LifePage() {
                     <Icon size={18} color={tip.color} />
                   </div>
                   <h4 className="font-bold text-[#1A1A2E] mb-2">{tip.title}</h4>
-                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.55)' }}>{tip.desc}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(0,0,0,0.45)' }}>{tip.desc}</p>
                 </div>
               )
             })}
@@ -257,7 +257,7 @@ export default function LifePage() {
                 <span className="text-2xl flex-shrink-0">{tip.emoji}</span>
                 <div>
                   <h4 className="font-bold text-[#1A1A2E] mb-1">{tip.title}</h4>
-                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>{tip.desc}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(0,0,0,0.5)' }}>{tip.desc}</p>
                 </div>
               </div>
             ))}
@@ -270,17 +270,17 @@ export default function LifePage() {
             <span className="text-4xl">🇮🇳</span>
             <div>
               <h2 className="text-xl font-bold text-[#1A1A2E] mb-1">Indian Community by City</h2>
-              <p className="text-sm" style={{ color: 'rgba(26,26,46,0.55)' }}>40,000+ Indian students and 200,000+ Indian expats make Germany very welcoming for Indians</p>
+              <p className="text-sm" style={{ color: 'rgba(0,0,0,0.45)' }}>40,000+ Indian students and 200,000+ Indian expats make Germany very welcoming for Indians</p>
             </div>
           </div>
           <div className="space-y-3">
             {indianCommunity.map((item, i) => (
-              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(30,58,95,0.02)', border: '1px solid rgba(30,58,95,0.06)' }}>
+              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.03)' }}>
                 <div className="flex items-center gap-2 mb-2">
-                  <MapPin size={12} color="#1E3A5F" />
+                  <MapPin size={12} color="#0A0A0A" />
                   <span className="font-semibold text-white text-sm">{item.city}</span>
                 </div>
-                <div className="grid md:grid-cols-2 gap-2 text-xs" style={{ color: 'rgba(26,26,46,0.55)' }}>
+                <div className="grid md:grid-cols-2 gap-2 text-xs" style={{ color: 'rgba(0,0,0,0.45)' }}>
                   <div><span className="text-white font-medium">Grocery stores: </span>{item.stores}</div>
                   <div><span className="text-white font-medium">Associations: </span>{item.assoc}</div>
                 </div>
@@ -290,10 +290,10 @@ export default function LifePage() {
         </motion.div>
 
         {/* Next step */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(45,106,79,0.08), rgba(91,140,255,0.05))', border: '1px solid rgba(30,58,95,0.12)' }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.03), rgba(91,140,255,0.05))', border: '1px solid #E8E8E8' }}>
           <h3 className="text-xl font-bold text-[#1A1A2E] mb-2">Now look at scholarships to fund your studies</h3>
-          <p className="text-sm mb-6" style={{ color: 'rgba(26,26,46,0.55)' }}>DAAD and foundation scholarships can cover your living expenses entirely.</p>
-          <Link to="/scholarships" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF' }}>
+          <p className="text-sm mb-6" style={{ color: 'rgba(0,0,0,0.45)' }}>DAAD and foundation scholarships can cover your living expenses entirely.</p>
+          <Link to="/scholarships" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: '#0A0A0A', color: '#FFFFFF' }}>
             Scholarship Guide →
           </Link>
         </motion.div>

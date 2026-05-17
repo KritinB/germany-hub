@@ -7,21 +7,21 @@ export const steps = [
     icon: FileCheck,
     title: 'Get University Admission',
     desc: 'Receive your official letter of admission (Zulassungsbescheid) or conditional admission from a German university. This is required before you can apply for the student visa.',
-    color: '#1E3A5F',
+    color: '#0A0A0A',
     timing: 'Before visa application',
   },
   {
     icon: Building2,
     title: 'Open Blocked Account',
     desc: 'Open a Sperrkonto (blocked account) with €11,904 as required for 2024. You\'ll receive confirmation documents to include in your visa application.',
-    color: '#1E3A5F',
+    color: '#0A0A0A',
     timing: '4–8 weeks before appointment',
   },
   {
     icon: CreditCard,
     title: 'Get Health Insurance Proof',
     desc: 'Arrange travel health insurance valid for Germany. Full German public health insurance (TK, AOK, Barmer) must be arranged once you arrive and enroll.',
-    color: '#2D6A4F',
+    color: '#444444',
     timing: 'Before visa appointment',
   },
   {
@@ -49,7 +49,7 @@ export const steps = [
     icon: Home,
     title: 'Register in Germany (Anmeldung)',
     desc: 'Within 14 days of arrival, register your address at the local Einwohnermeldeamt (registration office). This gives you the Meldebescheinigung needed for everything else.',
-    color: '#2D6A4F',
+    color: '#444444',
     timing: 'Within 14 days of arrival',
   },
 ]
@@ -84,11 +84,11 @@ export default function Visa() {
           className="text-center mb-14"
         >
           <div className="chip chip-blue inline-flex mb-5">Visa Process</div>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.03em', color: '#0A0A0A' }}>
             Student visa —<br />
             <span className="text-gold-gradient">step by step</span>
           </h2>
-          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(26,26,46,0.55)' }}>
+          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(0,0,0,0.45)' }}>
             The German student visa process from India typically takes 3–5 months.
             Start early to avoid missing your semester.
           </p>
@@ -104,7 +104,7 @@ export default function Visa() {
           style={{ background: 'rgba(251,146,60,0.08)', border: '1px solid rgba(251,146,60,0.2)' }}
         >
           <AlertTriangle size={20} color="#FB923C" className="flex-shrink-0 mt-0.5" />
-          <div className="text-sm" style={{ color: 'rgba(26,26,46,0.75)' }}>
+          <div className="text-sm" style={{ color: 'rgba(0,0,0,0.65)' }}>
             <span className="font-bold text-[#1A1A2E]">Book your visa appointment immediately after getting your admission letter.</span>{' '}
             German consulates in India (Delhi, Mumbai, Chennai, Kolkata, Bangalore) often have 2–4 month wait times for student visa appointments.
             Do not wait until your course start date approaches.
@@ -144,7 +144,7 @@ export default function Visa() {
                           {step.timing}
                         </div>
                       </div>
-                      <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.55)' }}>{step.desc}</p>
+                      <p className="text-sm leading-relaxed" style={{ color: 'rgba(0,0,0,0.45)' }}>{step.desc}</p>
                     </div>
                   </motion.div>
                 )
@@ -168,18 +168,18 @@ export default function Visa() {
                     <div
                       className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0 mt-0.5"
                       style={{
-                        background: doc.req ? 'rgba(30,58,95,0.12)' : 'rgba(30,58,95,0.04)',
-                        border: doc.req ? '1px solid rgba(30,58,95,0.3)' : '1px solid rgba(30,58,95,0.08)',
+                        background: doc.req ? 'rgba(0,0,0,0.06)' : 'rgba(0,0,0,0.02)',
+                        border: doc.req ? '1px solid rgba(0,0,0,0.15)' : '1px solid rgba(0,0,0,0.04)',
                       }}
                     >
                       <div
                         className="w-1.5 h-1.5 rounded-full"
-                        style={{ background: doc.req ? '#1E3A5F' : 'rgba(255,255,255,0.2)' }}
+                        style={{ background: doc.req ? '#0A0A0A' : 'rgba(255,255,255,0.2)' }}
                       />
                     </div>
                     <span
                       className="text-xs leading-relaxed"
-                      style={{ color: doc.req ? 'rgba(26,26,46,0.75)' : 'rgba(26,26,46,0.45)' }}
+                      style={{ color: doc.req ? 'rgba(0,0,0,0.65)' : 'rgba(0,0,0,0.38)' }}
                     >
                       {doc.label}
                       {!doc.req && <span className="ml-1 opacity-60">(optional)</span>}
@@ -188,7 +188,7 @@ export default function Visa() {
                 ))}
               </div>
 
-              <div className="mt-5 pt-4 text-xs space-y-2" style={{ borderTop: '1px solid rgba(30,58,95,0.06)', color: 'rgba(26,26,46,0.45)' }}>
+              <div className="mt-5 pt-4 text-xs space-y-2" style={{ borderTop: '1px solid rgba(0,0,0,0.03)', color: 'rgba(0,0,0,0.38)' }}>
                 <p><span className="text-white font-semibold">Visa type:</span> National Visa Type D (Nationales Visum)</p>
                 <p><span className="text-white font-semibold">Validity:</span> Initially 3–6 months, extended as residence permit upon arrival</p>
                 <p><span className="text-white font-semibold">Fee:</span> ~€75 (approximately ₹7,000)</p>
@@ -208,7 +208,7 @@ export default function Visa() {
           <Link
             to="/visa"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-            style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(30,58,95,0.25)' }}
+            style={{ background: '#0A0A0A', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
           >
             Full Visa Guide — Rejections, Extensions & Post-Arrival <ArrowRight size={15} />
           </Link>

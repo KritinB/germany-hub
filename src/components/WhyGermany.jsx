@@ -18,8 +18,8 @@ export const reasons = [
     title: 'Nearly Free Education',
     desc: 'Most public universities charge only a semester fee of €100–350. No tuition fees for EU and non-EU students alike in most states.',
     tag: 'Financial',
-    color: '#2D6A4F',
-    bg: 'rgba(45,106,79,0.08)',
+    color: '#444444',
+    bg: 'rgba(0,0,0,0.03)',
   },
   {
     id: 'world-class-universities',
@@ -27,8 +27,8 @@ export const reasons = [
     title: 'World-Class Universities',
     desc: 'TU Munich, LMU, Heidelberg, and RWTH Aachen consistently rank among the top 100 globally. Strong research culture with Nobel laureate faculty.',
     tag: 'Academic',
-    color: '#1E3A5F',
-    bg: 'rgba(30,58,95,0.08)',
+    color: '#0A0A0A',
+    bg: 'rgba(0,0,0,0.04)',
   },
   {
     id: 'job-seeker-visa',
@@ -36,8 +36,8 @@ export const reasons = [
     title: '18-Month Job Seeker Visa',
     desc: 'After graduation, you get an 18-month residence permit to find employment in Germany. One of Europe\'s most generous post-study work rights.',
     tag: 'Career',
-    color: '#0A5F73',
-    bg: 'rgba(10,95,115,0.08)',
+    color: '#444444',
+    bg: 'rgba(0,0,0,0.03)',
   },
   {
     id: 'english-programs',
@@ -45,8 +45,8 @@ export const reasons = [
     title: 'English Programs Available',
     desc: 'Over 1,500 programs taught entirely in English. No German required for most STEM Master\'s degrees at leading technical universities.',
     tag: 'Language',
-    color: '#5B5EA6',
-    bg: 'rgba(91,94,166,0.08)',
+    color: '#555555',
+    bg: 'rgba(0,0,0,0.03)',
   },
   {
     id: 'safe-country',
@@ -54,8 +54,8 @@ export const reasons = [
     title: 'Safe & Stable Country',
     desc: 'Germany consistently ranks high in global safety, political stability, and quality of life indices. Strong legal protections for students and workers.',
     tag: 'Lifestyle',
-    color: '#7A3559',
-    bg: 'rgba(122,53,89,0.08)',
+    color: '#666666',
+    bg: 'rgba(0,0,0,0.03)',
   },
   {
     id: 'mobility',
@@ -63,8 +63,8 @@ export const reasons = [
     title: 'Semester Ticket & Mobility',
     desc: 'Student semester tickets often cover all public transport in your region. Travel across the Schengen Area with your German student visa.',
     tag: 'Mobility',
-    color: '#B04A1F',
-    bg: 'rgba(176,74,31,0.08)',
+    color: '#555555',
+    bg: 'rgba(0,0,0,0.03)',
   },
 ]
 
@@ -82,11 +82,11 @@ export default function WhyGermany() {
           className="text-center mb-16"
         >
           <div className="chip chip-gold inline-flex mb-5">Why Choose Germany</div>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.03em', color: '#0A0A0A' }}>
             The smartest decision<br />
             <span className="text-gold-gradient">Indian students</span> are making
           </h2>
-          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(26,26,46,0.55)' }}>
+          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(0,0,0,0.45)' }}>
             From free education to world-class research, here's why 40,000+ Indian students
             choose Germany every year.
           </p>
@@ -132,8 +132,8 @@ export default function WhyGermany() {
                   {r.tag}
                 </div>
 
-                <h3 className="text-lg font-bold mb-2" style={{ color: '#1A1A2E' }}>{r.title}</h3>
-                <p className="text-sm leading-relaxed flex-1" style={{ color: 'rgba(26,26,46,0.55)' }}>{r.desc}</p>
+                <h3 className="text-lg font-bold mb-2" style={{ color: '#0A0A0A' }}>{r.title}</h3>
+                <p className="text-sm leading-relaxed flex-1" style={{ color: 'rgba(0,0,0,0.45)' }}>{r.desc}</p>
 
                 <Link
                   to={`/why-germany#${r.id}`}

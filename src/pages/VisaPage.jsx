@@ -40,17 +40,17 @@ export default function VisaPage() {
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
 
-        <Link to="/#visa" className="inline-flex items-center gap-2 mb-8 text-sm font-medium" style={{ color: 'rgba(26,26,46,0.55)' }}>
+        <Link to="/#visa" className="inline-flex items-center gap-2 mb-8 text-sm font-medium" style={{ color: 'rgba(0,0,0,0.45)' }}>
           <ArrowLeft size={15} /> Back to Guide
         </Link>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-12">
           <div className="chip chip-blue inline-flex mb-4">Visa Process — Deep Dive</div>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.03em', color: '#0A0A0A' }}>
             Student Visa — Complete Guide<br />
             <span className="text-gold-gradient">From India to Germany</span>
           </h1>
-          <p className="text-base leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>
+          <p className="text-base leading-relaxed" style={{ color: 'rgba(0,0,0,0.5)' }}>
             Everything about getting your German student visa — from the step-by-step process to what to do if your visa
             is rejected, and what happens after you arrive.
           </p>
@@ -59,7 +59,7 @@ export default function VisaPage() {
         {/* Warning */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="rounded-2xl p-5 flex gap-4 mb-10" style={{ background: 'rgba(251,146,60,0.08)', border: '1px solid rgba(251,146,60,0.2)' }}>
           <AlertTriangle size={20} color="#FB923C" className="flex-shrink-0 mt-0.5" />
-          <div className="text-sm" style={{ color: 'rgba(26,26,46,0.75)' }}>
+          <div className="text-sm" style={{ color: 'rgba(0,0,0,0.65)' }}>
             <span className="font-bold text-[#1A1A2E]">Book your visa appointment immediately after getting your admission letter.</span>{' '}
             German consulates in India (Delhi, Mumbai, Chennai, Kolkata, Bangalore) often have 2–4 month wait times.
           </div>
@@ -83,7 +83,7 @@ export default function VisaPage() {
                         {step.timing}
                       </div>
                     </div>
-                    <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>{step.desc}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: 'rgba(0,0,0,0.5)' }}>{step.desc}</p>
                   </div>
                 </div>
               )
@@ -97,16 +97,16 @@ export default function VisaPage() {
           <div className="grid md:grid-cols-2 gap-3">
             {documents.map((doc, i) => (
               <div key={i} className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: doc.req ? 'rgba(30,58,95,0.12)' : 'rgba(30,58,95,0.04)', border: doc.req ? '1px solid rgba(30,58,95,0.3)' : '1px solid rgba(30,58,95,0.08)' }}>
-                  <div className="w-1.5 h-1.5 rounded-full" style={{ background: doc.req ? '#1E3A5F' : 'rgba(255,255,255,0.2)' }} />
+                <div className="w-5 h-5 rounded flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: doc.req ? 'rgba(0,0,0,0.06)' : 'rgba(0,0,0,0.02)', border: doc.req ? '1px solid rgba(0,0,0,0.15)' : '1px solid rgba(0,0,0,0.04)' }}>
+                  <div className="w-1.5 h-1.5 rounded-full" style={{ background: doc.req ? '#0A0A0A' : 'rgba(255,255,255,0.2)' }} />
                 </div>
-                <span className="text-sm" style={{ color: doc.req ? 'rgba(26,26,46,0.8)' : 'rgba(26,26,46,0.45)' }}>
+                <span className="text-sm" style={{ color: doc.req ? 'rgba(0,0,0,0.7)' : 'rgba(0,0,0,0.38)' }}>
                   {doc.label}{!doc.req && <span className="ml-1 opacity-60">(optional)</span>}
                 </span>
               </div>
             ))}
           </div>
-          <div className="mt-6 pt-4 text-sm space-y-2" style={{ borderTop: '1px solid rgba(30,58,95,0.06)', color: 'rgba(26,26,46,0.45)' }}>
+          <div className="mt-6 pt-4 text-sm space-y-2" style={{ borderTop: '1px solid rgba(0,0,0,0.03)', color: 'rgba(0,0,0,0.38)' }}>
             <p><span className="text-white font-semibold">Visa type:</span> National Visa Type D — valid for 3–6 months, extended to residence permit after arrival</p>
             <p><span className="text-white font-semibold">Fee:</span> ~€75 (approximately ₹7,000)</p>
           </div>
@@ -119,14 +119,14 @@ export default function VisaPage() {
           </h2>
           <div className="space-y-4">
             {rejectionReasons.map((r, i) => (
-              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(30,58,95,0.02)', border: '1px solid rgba(30,58,95,0.06)' }}>
+              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.03)' }}>
                 <div className="flex items-start gap-2 mb-2">
                   <XCircle size={13} color="#F472B6" className="flex-shrink-0 mt-0.5" />
                   <span className="text-sm font-semibold text-[#1A1A2E]">{r.reason}</span>
                 </div>
                 <div className="flex items-start gap-2 ml-5">
-                  <CheckCircle2 size={13} color="#2D6A4F" className="flex-shrink-0 mt-0.5" />
-                  <span className="text-sm" style={{ color: 'rgba(26,26,46,0.6)' }}>{r.fix}</span>
+                  <CheckCircle2 size={13} color="#444444" className="flex-shrink-0 mt-0.5" />
+                  <span className="text-sm" style={{ color: 'rgba(0,0,0,0.5)' }}>{r.fix}</span>
                 </div>
               </div>
             ))}
@@ -136,24 +136,24 @@ export default function VisaPage() {
         {/* Post-arrival checklist */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-            <Home size={20} color="#2D6A4F" /> Post-Arrival Checklist — Day 1 to Week 4
+            <Home size={20} color="#444444" /> Post-Arrival Checklist — Day 1 to Week 4
           </h2>
           <div className="space-y-4">
             {postArrivalChecklist.map((item, i) => (
               <div key={i} className="glass rounded-2xl p-6">
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: item.priority === 'critical' ? '#F472B6' : item.priority === 'high' ? '#FB923C' : '#1E3A5F' }} />
+                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: item.priority === 'critical' ? '#F472B6' : item.priority === 'high' ? '#FB923C' : '#0A0A0A' }} />
                     <h3 className="font-bold text-[#1A1A2E]">{item.task}</h3>
                   </div>
                   <div className="flex items-center gap-2 flex-shrink-0">
                     <div className="chip text-[10px] px-2 py-0.5" style={{ background: item.priority === 'critical' ? 'rgba(244,114,182,0.1)' : 'rgba(251,146,60,0.1)', color: item.priority === 'critical' ? '#F472B6' : '#FB923C', border: `1px solid ${item.priority === 'critical' ? 'rgba(244,114,182,0.2)' : 'rgba(251,146,60,0.2)'}` }}>
                       {item.priority}
                     </div>
-                    <div className="text-xs" style={{ color: 'rgba(26,26,46,0.4)' }}>{item.deadline}</div>
+                    <div className="text-xs" style={{ color: 'rgba(0,0,0,0.35)' }}>{item.deadline}</div>
                   </div>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>{item.details}</p>
+                <p className="text-sm leading-relaxed" style={{ color: 'rgba(0,0,0,0.5)' }}>{item.details}</p>
               </div>
             ))}
           </div>
@@ -166,8 +166,8 @@ export default function VisaPage() {
           </h2>
           <div className="space-y-3">
             {residencePermitInfo.map((r, i) => (
-              <div key={i} className="flex items-start justify-between py-3" style={{ borderBottom: '1px solid rgba(30,58,95,0.04)' }}>
-                <span className="text-sm" style={{ color: 'rgba(26,26,46,0.55)' }}>{r.label}</span>
+              <div key={i} className="flex items-start justify-between py-3" style={{ borderBottom: '1px solid rgba(0,0,0,0.02)' }}>
+                <span className="text-sm" style={{ color: 'rgba(0,0,0,0.45)' }}>{r.label}</span>
                 <span className="text-sm font-bold text-right ml-4" style={{ color: '#A78BFA' }}>{r.value}</span>
               </div>
             ))}
@@ -175,10 +175,10 @@ export default function VisaPage() {
         </motion.div>
 
         {/* Next step */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(45,106,79,0.08), rgba(91,140,255,0.05))', border: '1px solid rgba(30,58,95,0.12)' }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(0,0,0,0.03), rgba(91,140,255,0.05))', border: '1px solid #E8E8E8' }}>
           <h3 className="text-xl font-bold text-[#1A1A2E] mb-2">Ready to land? Here's what to expect in Germany</h3>
-          <p className="text-sm mb-6" style={{ color: 'rgba(26,26,46,0.55)' }}>City comparisons, housing tips, and your Day 1 checklist.</p>
-          <Link to="/life" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF' }}>
+          <p className="text-sm mb-6" style={{ color: 'rgba(0,0,0,0.45)' }}>City comparisons, housing tips, and your Day 1 checklist.</p>
+          <Link to="/life" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: '#0A0A0A', color: '#FFFFFF' }}>
             Life in Germany Guide →
           </Link>
         </motion.div>
