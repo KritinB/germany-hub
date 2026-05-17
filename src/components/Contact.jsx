@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 export default function Contact() {
@@ -55,13 +54,7 @@ export default function Contact() {
       <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(201,164,109,0.04) 0%, transparent 60%)' }} />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-14"
-        >
+        <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6"
             style={{ background: 'rgba(201,164,109,0.1)', border: '1px solid rgba(201,164,109,0.2)', color: '#C9A46D' }}>
             Get In Touch
@@ -72,13 +65,9 @@ export default function Contact() {
           <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(245,245,248,0.45)' }}>
             Whether you're confused about the APS process, visa requirements, or anything else — send us a message and we'll get back to you.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.1 }}
+        <div
           className="max-w-2xl mx-auto rounded-3xl p-8 md:p-10"
           style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
         >
@@ -178,7 +167,7 @@ export default function Contact() {
               </button>
             </form>
           )}
-        </motion.div>
+        </div>
       </div>
     </section>
   )
