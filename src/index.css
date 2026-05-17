@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #07070D;
+  --surface: #0D0D1A;
+  --elevated: #131324;
+  --border: rgba(255, 255, 255, 0.07);
+  --gold: #C9A46D;
+  --gold-bright: #E8C07A;
+  --text: #F5F5F8;
+  --text-muted: rgba(245, 245, 248, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Subtle noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 164, 109, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 164, 109, 0.5);
+}
+
+/* Glass card utility */
+.glass {
+  background: rgba(13, 13, 26, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-elevated {
+  background: rgba(19, 19, 36, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #E8C07A 0%, #C9A46D 50%, #A07840 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section spacing */
+.section {
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Step connector line */
+.step-connector {
+  position: absolute;
+  left: 20px;
+  top: 44px;
+  bottom: -20px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(201, 164, 109, 0.4), transparent);
+}
+
+/* Tag chip */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.chip-gold {
+  background: rgba(201, 164, 109, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(201, 164, 109, 0.25);
+}
+
+.chip-blue {
+  background: rgba(91, 140, 255, 0.12);
+  color: #7AA8FF;
+  border: 1px solid rgba(91, 140, 255, 0.25);
+}
+
+.chip-green {
+  background: rgba(52, 211, 153, 0.12);
+  color: #6EDDB8;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+}
+
+/* Glow effects */
+.glow-gold {
+  box-shadow: 0 0 40px rgba(201, 164, 109, 0.12), 0 0 80px rgba(201, 164, 109, 0.06);
+}
+
+.glow-blue {
+  box-shadow: 0 0 40px rgba(91, 140, 255, 0.12), 0 0 80px rgba(91, 140, 255, 0.06);
+}
+
+/* Hover card effect */
+.hover-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 164, 109, 0.2) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(201, 164, 109, 0.08);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.07), transparent);
+}
+
+/* Active tab indicator */
+.tab-active {
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
+
+/* Number badge */
+.num-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  background: rgba(201, 164, 109, 0.1);
+  border: 1px solid rgba(201, 164, 109, 0.3);
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent 30%, rgba(255,255,255,0.04) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
