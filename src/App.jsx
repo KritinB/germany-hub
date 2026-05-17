@@ -11,6 +11,7 @@ import Scholarships from './components/Scholarships'
 import Visa from './components/Visa'
 import LifeInGermany from './components/LifeInGermany'
 import Footer from './components/Footer'
+import Contact from './components/Contact'
 
 import APSPage from './pages/APSPage'
 import FinancesPage from './pages/FinancesPage'
@@ -42,6 +43,8 @@ function HomePage() {
       <Visa />
       <div className="divider" />
       <LifeInGermany />
+      <div className="divider" />
+      <Contact />
       <Footer />
     </div>
   )
