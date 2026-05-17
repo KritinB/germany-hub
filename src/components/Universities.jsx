@@ -115,11 +115,11 @@ export default function Universities() {
           className="text-center mb-14"
         >
           <div className="chip chip-blue inline-flex mb-5">Top Universities</div>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.02em' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
             Where the best<br />
             <span className="text-gold-gradient">Indian students</span> go
           </h2>
-          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(245,245,248,0.5)' }}>
+          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(26,26,46,0.55)' }}>
             Germany's top universities for international students — ranked, profiled,
             and picked specifically for the Indian applicant.
           </p>
@@ -135,7 +135,7 @@ export default function Universities() {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
               className="glass rounded-2xl p-6 hover-card cursor-default relative overflow-hidden"
-              style={u.highlight ? { border: '1px solid rgba(201,164,109,0.25)', boxShadow: '0 0 30px rgba(201,164,109,0.07)' } : {}}
+              style={u.highlight ? { border: '1px solid rgba(30,58,95,0.2)', boxShadow: '0 0 30px rgba(30,58,95,0.06)' } : {}}
             >
               {u.highlight && (
                 <div className="absolute top-4 right-4">
@@ -153,11 +153,11 @@ export default function Universities() {
                 {u.abbr}
               </div>
 
-              <h3 className="font-bold text-white text-sm mb-1 leading-tight">{u.name}</h3>
+              <h3 className="font-bold text-[#1A1A2E] text-sm mb-1 leading-tight">{u.name}</h3>
 
               <div className="flex items-center gap-1.5 mb-3">
-                <MapPin size={11} color="rgba(245,245,248,0.35)" />
-                <span className="text-xs" style={{ color: 'rgba(245,245,248,0.4)' }}>{u.city}</span>
+                <MapPin size={11} color="rgba(26,26,46,0.4)" />
+                <span className="text-xs" style={{ color: 'rgba(26,26,46,0.45)' }}>{u.city}</span>
               </div>
 
               <div
@@ -169,20 +169,20 @@ export default function Universities() {
 
               <div className="space-y-2 mb-4">
                 <div className="flex items-center justify-between text-xs">
-                  <span style={{ color: 'rgba(245,245,248,0.4)' }}>
+                  <span style={{ color: 'rgba(26,26,46,0.45)' }}>
                     <Globe size={10} className="inline mr-1" />Int'l Students
                   </span>
-                  <span className="font-semibold" style={{ color: '#E8C07A' }}>{u.intl}</span>
+                  <span className="font-semibold" style={{ color: '#2D6A4F' }}>{u.intl}</span>
                 </div>
                 <div className="flex items-center justify-between text-xs">
-                  <span style={{ color: 'rgba(245,245,248,0.4)' }}>
+                  <span style={{ color: 'rgba(26,26,46,0.45)' }}>
                     <Users size={10} className="inline mr-1" />Programs
                   </span>
-                  <span className="font-semibold" style={{ color: '#E8C07A' }}>{u.programs}</span>
+                  <span className="font-semibold" style={{ color: '#2D6A4F' }}>{u.programs}</span>
                 </div>
               </div>
 
-              <div className="text-xs py-2 px-3 rounded-lg" style={{ background: 'rgba(255,255,255,0.03)', color: 'rgba(245,245,248,0.5)' }}>
+              <div className="text-xs py-2 px-3 rounded-lg" style={{ background: 'rgba(30,58,95,0.02)', color: 'rgba(26,26,46,0.55)' }}>
                 {u.specialty}
               </div>
 
@@ -208,7 +208,7 @@ export default function Universities() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
           className="text-center text-sm mt-8"
-          style={{ color: 'rgba(245,245,248,0.35)' }}
+          style={{ color: 'rgba(26,26,46,0.4)' }}
         >
           Also consider: University of Stuttgart, University of Cologne, University of Bonn, TU Darmstadt, University of Mannheim, and many more.
           Germany has 400+ accredited universities — use DAAD's university database to find the perfect fit for your field.

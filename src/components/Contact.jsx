@@ -28,10 +28,10 @@ export default function Contact() {
   }
 
   const inputStyle = {
-    background: 'rgba(255,255,255,0.04)',
-    border: '1px solid rgba(255,255,255,0.08)',
+    background: 'rgba(30,58,95,0.03)',
+    border: '1px solid rgba(30,58,95,0.08)',
     borderRadius: '12px',
-    color: '#F5F5F8',
+    color: '#1A1A2E',
     padding: '12px 16px',
     width: '100%',
     outline: 'none',
@@ -45,7 +45,7 @@ export default function Contact() {
     fontWeight: '600',
     letterSpacing: '0.05em',
     textTransform: 'uppercase',
-    color: 'rgba(245,245,248,0.4)',
+    color: 'rgba(26,26,46,0.45)',
     marginBottom: '8px',
   }
 
@@ -56,30 +56,30 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6"
-            style={{ background: 'rgba(201,164,109,0.1)', border: '1px solid rgba(201,164,109,0.2)', color: '#C9A46D' }}>
+            style={{ background: 'rgba(30,58,95,0.08)', border: '1px solid rgba(30,58,95,0.18)', color: '#1E3A5F' }}>
             Get In Touch
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4" style={{ letterSpacing: '-0.02em' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
             Have a <span className="text-gold-gradient">question?</span>
           </h2>
-          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(245,245,248,0.45)' }}>
+          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(26,26,46,0.5)' }}>
             Whether you're confused about the APS process, visa requirements, or anything else — send us a message and we'll get back to you.
           </p>
         </div>
 
         <div
           className="max-w-2xl mx-auto rounded-3xl p-8 md:p-10"
-          style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
+          style={{ background: 'rgba(30,58,95,0.02)', border: '1px solid rgba(30,58,95,0.08)' }}
         >
           {status === 'success' ? (
             <div className="text-center py-10">
-              <CheckCircle size={48} color="#C9A46D" className="mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Message sent!</h3>
-              <p style={{ color: 'rgba(245,245,248,0.45)', fontSize: '14px' }}>We'll get back to you as soon as possible.</p>
+              <CheckCircle size={48} color="#1E3A5F" className="mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-[#1A1A2E] mb-2">Message sent!</h3>
+              <p style={{ color: 'rgba(26,26,46,0.5)', fontSize: '14px' }}>We'll get back to you as soon as possible.</p>
               <button
                 onClick={() => setStatus('idle')}
                 className="mt-6 px-6 py-2.5 rounded-xl text-sm font-semibold"
-                style={{ background: 'rgba(201,164,109,0.15)', color: '#C9A46D', border: '1px solid rgba(201,164,109,0.25)' }}
+                style={{ background: 'rgba(30,58,95,0.12)', color: '#1E3A5F', border: '1px solid rgba(30,58,95,0.2)' }}
               >
                 Send another message
               </button>
@@ -97,7 +97,7 @@ export default function Contact() {
                     placeholder="Your name"
                     style={inputStyle}
                     onFocus={e => e.target.style.borderColor = 'rgba(201,164,109,0.5)'}
-                    onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
+                    onBlur={e => e.target.style.borderColor = 'rgba(30,58,95,0.08)'}
                   />
                 </div>
                 <div>
@@ -111,7 +111,7 @@ export default function Contact() {
                     placeholder="your@email.com"
                     style={inputStyle}
                     onFocus={e => e.target.style.borderColor = 'rgba(201,164,109,0.5)'}
-                    onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
+                    onBlur={e => e.target.style.borderColor = 'rgba(30,58,95,0.08)'}
                   />
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function Contact() {
                   placeholder="What's your question about?"
                   style={inputStyle}
                   onFocus={e => e.target.style.borderColor = 'rgba(201,164,109,0.5)'}
-                  onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
+                  onBlur={e => e.target.style.borderColor = 'rgba(30,58,95,0.08)'}
                 />
               </div>
 
@@ -141,7 +141,7 @@ export default function Contact() {
                   placeholder="Tell us more about your query..."
                   style={{ ...inputStyle, resize: 'vertical' }}
                   onFocus={e => e.target.style.borderColor = 'rgba(201,164,109,0.5)'}
-                  onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
+                  onBlur={e => e.target.style.borderColor = 'rgba(30,58,95,0.08)'}
                 />
               </div>
 
@@ -157,8 +157,8 @@ export default function Contact() {
                 disabled={status === 'sending'}
                 className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
                 style={{
-                  background: status === 'sending' ? 'rgba(201,164,109,0.4)' : 'linear-gradient(135deg, #C9A46D, #A07840)',
-                  color: '#07070D',
+                  background: status === 'sending' ? 'rgba(201,164,109,0.4)' : 'linear-gradient(135deg, #1E3A5F, #2E5082)',
+                  color: '#FFFFFF',
                   cursor: status === 'sending' ? 'not-allowed' : 'pointer',
                 }}
               >

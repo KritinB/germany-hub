@@ -19,7 +19,7 @@ const links = {
   'Student Life': [
     { label: 'Techniker Krankenkasse (TK Insurance)', url: 'https://www.tk.de' },
     { label: 'Studentenwerk (Student Services)', url: 'https://www.studentenwerke.de' },
-    { label: 'Germany\'s Universities QS Rankings', url: 'https://www.topuniversities.com' },
+    { label: "Germany's Universities QS Rankings", url: 'https://www.topuniversities.com' },
     { label: 'WG-Gesucht (Student Housing)', url: 'https://www.wg-gesucht.de' },
     { label: 'Germany Job Market (Make-It-In-DE)', url: 'https://www.make-it-in-germany.com' },
   ],
@@ -27,25 +27,23 @@ const links = {
 
 export default function Footer() {
   return (
-    <footer className="relative pt-20 pb-10" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201,164,109,0.05) 0%, transparent 60%)' }} />
+    <footer className="relative" style={{ background: '#1E3A5F' }}>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-
-        {/* CTA banner */}
+      {/* CTA banner */}
+      <div className="max-w-7xl mx-auto px-6 pt-16 pb-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="rounded-3xl p-10 text-center mb-16"
-          style={{ background: 'linear-gradient(135deg, rgba(201,164,109,0.1) 0%, rgba(91,140,255,0.06) 100%)', border: '1px solid rgba(201,164,109,0.15)' }}
+          style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
         >
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-4" style={{ letterSpacing: '-0.02em' }}>
             Ready to make Germany<br />
-            <span className="text-gold-gradient">your next chapter?</span>
+            <span style={{ color: '#7EC8A4' }}>your next chapter?</span>
           </h2>
-          <p className="text-base mb-8 max-w-lg mx-auto" style={{ color: 'rgba(245,245,248,0.5)' }}>
+          <p className="text-base mb-8 max-w-lg mx-auto" style={{ color: 'rgba(255,255,255,0.6)' }}>
             Start with the APS Certificate — it's the gateway to every German university.
             The earlier you apply, the better your chances.
           </p>
@@ -53,7 +51,7 @@ export default function Footer() {
             <a
               href="#aps"
               className="px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-              style={{ background: 'linear-gradient(135deg, #C9A46D, #A07840)', color: '#07070D', boxShadow: '0 0 30px rgba(201,164,109,0.3)' }}
+              style={{ background: '#FFFFFF', color: '#1E3A5F', boxShadow: '0 4px 16px rgba(0,0,0,0.15)' }}
             >
               Start APS Process →
             </a>
@@ -62,7 +60,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-              style={{ background: 'rgba(255,255,255,0.06)', color: '#F5F5F8', border: '1px solid rgba(255,255,255,0.1)' }}
+              style={{ background: 'rgba(255,255,255,0.1)', color: '#FFFFFF', border: '1px solid rgba(255,255,255,0.2)' }}
             >
               Explore DAAD Scholarships <ExternalLink size={13} />
             </a>
@@ -79,7 +77,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
             >
-              <h4 className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: 'rgba(245,245,248,0.3)' }}>
+              <h4 className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: 'rgba(255,255,255,0.4)' }}>
                 {category}
               </h4>
               <div className="space-y-3">
@@ -90,9 +88,9 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm transition-all duration-200 group"
-                    style={{ color: 'rgba(245,245,248,0.45)' }}
-                    onMouseEnter={e => { e.currentTarget.style.color = '#C9A46D' }}
-                    onMouseLeave={e => { e.currentTarget.style.color = 'rgba(245,245,248,0.45)' }}
+                    style={{ color: 'rgba(255,255,255,0.55)' }}
+                    onMouseEnter={e => { e.currentTarget.style.color = '#7EC8A4' }}
+                    onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)' }}
                   >
                     <ExternalLink size={11} className="opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity" />
                     {item.label}
@@ -103,24 +101,24 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="divider mb-8" />
+        <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', marginBottom: '2rem' }} />
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'rgba(201,164,109,0.15)', border: '1px solid rgba(201,164,109,0.25)' }}>
-              <span className="text-xs font-bold text-gold-gradient">DE</span>
+            <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)' }}>
+              <span className="text-xs font-bold text-white">DE</span>
             </div>
-            <span className="font-bold text-sm text-white">Study<span className="text-gold-gradient">DE</span></span>
+            <span className="font-bold text-sm text-white">Study<span style={{ color: '#7EC8A4' }}>DE</span></span>
           </div>
 
-          <p className="text-xs text-center" style={{ color: 'rgba(245,245,248,0.25)' }}>
+          <p className="text-xs text-center" style={{ color: 'rgba(255,255,255,0.35)' }}>
             Information is provided for guidance only. Always verify with official sources before making decisions.
             APS fees, blocked account amounts, and visa rules may change — check the latest at aps-india.de and daad.in.
           </p>
 
-          <div className="flex items-center gap-1.5 text-xs" style={{ color: 'rgba(245,245,248,0.25)' }}>
-            Made with <Heart size={11} fill="currentColor" color="#C9A46D" /> for Indian students
+          <div className="flex items-center gap-1.5 text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>
+            Made with <Heart size={11} fill="currentColor" color="#7EC8A4" /> for Indian students
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ export const scholarships = [
     level: ['Master\'s', 'PhD', 'Postdoc'],
     deadline: 'October–November (for next year)',
     eligibility: 'Indian citizens with excellent academic record',
-    color: '#C9A46D',
+    color: '#1E3A5F',
     url: 'https://www.daad.in',
     highlight: true,
     desc: 'Germany\'s premier scholarship body. Multiple programs for Indian students at all levels. Includes health insurance, travel allowance, and language course support.',
@@ -22,7 +22,7 @@ export const scholarships = [
     level: ['Master\'s'],
     deadline: 'October annually',
     eligibility: 'Students from developing countries, public policy/admin focus',
-    color: '#C9A46D',
+    color: '#1E3A5F',
     url: 'https://www.daad.de',
     highlight: false,
     desc: 'For future leaders from developing countries studying public policy, law, economics, or political science. Includes a study visit to Germany.',
@@ -34,7 +34,7 @@ export const scholarships = [
     level: ['Bachelor\'s', 'Master\'s'],
     deadline: 'Varies by university (typically April–June)',
     eligibility: 'Enrolled students at German universities, merit-based',
-    color: '#5B8CFF',
+    color: '#1E3A5F',
     url: 'https://www.deutschlandstipendium.de',
     highlight: false,
     desc: 'National scholarship co-funded by federal government and private sponsors. Apply directly through your university once enrolled. Very competitive — ~2% of students receive it.',
@@ -58,7 +58,7 @@ export const scholarships = [
     level: ['Bachelor\'s', 'Master\'s', 'PhD'],
     deadline: 'March 1 & September 1',
     eligibility: 'Green/ecological values, social engagement, academic merit',
-    color: '#34D399',
+    color: '#2D6A4F',
     url: 'https://www.boell.de',
     highlight: false,
     desc: 'Green party-affiliated foundation. Supports students with strong environmental, feminist, or civic engagement. Open to international students.',
@@ -91,11 +91,11 @@ export default function Scholarships() {
           className="text-center mb-14"
         >
           <div className="chip chip-gold inline-flex mb-5">Scholarships</div>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.02em' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
             Fund your degree —<br />
             <span className="text-gold-gradient">money is available</span>
           </h2>
-          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(245,245,248,0.5)' }}>
+          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(26,26,46,0.55)' }}>
             Germany has some of the most generous scholarships for Indian students.
             Most don't require repayment. Start early — these are competitive.
           </p>
@@ -110,7 +110,7 @@ export default function Scholarships() {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="glass rounded-2xl p-6 flex flex-col hover-card cursor-default"
-              style={s.highlight ? { border: '1px solid rgba(201,164,109,0.25)' } : {}}
+              style={s.highlight ? { border: '1px solid rgba(30,58,95,0.2)' } : {}}
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
@@ -118,7 +118,7 @@ export default function Scholarships() {
                   <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: s.color }}>
                     {s.org}
                   </div>
-                  <h3 className="font-bold text-white leading-tight">{s.name}</h3>
+                  <h3 className="font-bold text-[#1A1A2E] leading-tight">{s.name}</h3>
                 </div>
                 <a
                   href={s.url}
@@ -138,7 +138,7 @@ export default function Scholarships() {
                 <span className="font-bold text-sm" style={{ color: s.color }}>{s.amount}</span>
               </div>
 
-              <p className="text-sm mb-4 flex-1 leading-relaxed" style={{ color: 'rgba(245,245,248,0.5)' }}>{s.desc}</p>
+              <p className="text-sm mb-4 flex-1 leading-relaxed" style={{ color: 'rgba(26,26,46,0.55)' }}>{s.desc}</p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-1.5 mb-4">
@@ -149,12 +149,12 @@ export default function Scholarships() {
                 ))}
               </div>
 
-              <div className="space-y-2 pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-                <div className="flex items-start gap-2 text-xs" style={{ color: 'rgba(245,245,248,0.45)' }}>
+              <div className="space-y-2 pt-3" style={{ borderTop: '1px solid rgba(30,58,95,0.04)' }}>
+                <div className="flex items-start gap-2 text-xs" style={{ color: 'rgba(26,26,46,0.5)' }}>
                   <Calendar size={11} className="mt-0.5 flex-shrink-0" style={{ color: s.color }} />
                   <span>Deadline: {s.deadline}</span>
                 </div>
-                <div className="flex items-start gap-2 text-xs" style={{ color: 'rgba(245,245,248,0.45)' }}>
+                <div className="flex items-start gap-2 text-xs" style={{ color: 'rgba(26,26,46,0.5)' }}>
                   <Users size={11} className="mt-0.5 flex-shrink-0" style={{ color: s.color }} />
                   <span>{s.eligibility}</span>
                 </div>
@@ -171,14 +171,14 @@ export default function Scholarships() {
           transition={{ delay: 0.5 }}
           className="mt-8 glass rounded-2xl p-6 flex gap-4"
         >
-          <div className="w-10 h-10 rounded-xl flex-shrink-0 flex items-center justify-center" style={{ background: 'rgba(201,164,109,0.1)', border: '1px solid rgba(201,164,109,0.2)' }}>
-            <Award size={18} color="#C9A46D" />
+          <div className="w-10 h-10 rounded-xl flex-shrink-0 flex items-center justify-center" style={{ background: 'rgba(30,58,95,0.08)', border: '1px solid rgba(30,58,95,0.18)' }}>
+            <Award size={18} color="#1E3A5F" />
           </div>
           <div>
-            <h4 className="font-bold text-white mb-1">DAAD Scholarship Database</h4>
-            <p className="text-sm" style={{ color: 'rgba(245,245,248,0.5)' }}>
+            <h4 className="font-bold text-[#1A1A2E] mb-1">DAAD Scholarship Database</h4>
+            <p className="text-sm" style={{ color: 'rgba(26,26,46,0.55)' }}>
               The DAAD maintains a comprehensive database of all scholarships available to Indian students studying in Germany.
-              Visit <span style={{ color: '#C9A46D' }}>daad.de/scholarships</span> to search by program level, field of study, and nationality.
+              Visit <span style={{ color: '#1E3A5F' }}>daad.de/scholarships</span> to search by program level, field of study, and nationality.
               Also check your specific university's internal scholarship portal after enrollment.
             </p>
           </div>
@@ -195,7 +195,7 @@ export default function Scholarships() {
           <Link
             to="/scholarships"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-            style={{ background: 'linear-gradient(135deg, #C9A46D, #A07840)', color: '#07070D', boxShadow: '0 0 30px rgba(201,164,109,0.3)' }}
+            style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(30,58,95,0.25)' }}
           >
             Full Scholarship Guide — Applications, SOPs & Deadlines <ArrowRight size={15} />
           </Link>

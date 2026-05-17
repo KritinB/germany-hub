@@ -159,12 +159,12 @@ export default function UniversityPage() {
   if (!uni || !details) return <Navigate to="/" replace />
 
   return (
-    <div style={{ background: '#07070D', minHeight: '100vh' }}>
+    <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
       <Navbar />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
 
-        <Link to="/#universities" className="inline-flex items-center gap-2 mb-8 text-sm font-medium" style={{ color: 'rgba(245,245,248,0.5)' }}>
+        <Link to="/#universities" className="inline-flex items-center gap-2 mb-8 text-sm font-medium" style={{ color: 'rgba(26,26,46,0.55)' }}>
           <ArrowLeft size={15} /> Back to Universities
         </Link>
 
@@ -178,17 +178,17 @@ export default function UniversityPage() {
               {uni.highlight && <div className="chip chip-gold text-[10px] px-2 py-0.5 mb-2 inline-flex"><Star size={8} fill="currentColor" /> Top Pick for Indians</div>}
               <h1 className="text-2xl md:text-3xl font-extrabold text-white mb-1">{details.fullName}</h1>
               <div className="flex items-center gap-2 mb-2">
-                <MapPin size={13} color="rgba(245,245,248,0.4)" />
-                <span className="text-sm" style={{ color: 'rgba(245,245,248,0.4)' }}>{uni.city}</span>
+                <MapPin size={13} color="rgba(26,26,46,0.45)" />
+                <span className="text-sm" style={{ color: 'rgba(26,26,46,0.45)' }}>{uni.city}</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 <div className="text-xs font-bold px-2.5 py-1 rounded-lg" style={{ background: `${uni.color}12`, color: uni.color }}>{uni.rank}</div>
-                <div className="text-xs px-2.5 py-1 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(245,245,248,0.5)' }}>Founded {details.founded}</div>
-                <div className="text-xs px-2.5 py-1 rounded-lg" style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(245,245,248,0.5)' }}>{details.students} students</div>
+                <div className="text-xs px-2.5 py-1 rounded-lg" style={{ background: 'rgba(30,58,95,0.04)', color: 'rgba(26,26,46,0.55)' }}>Founded {details.founded}</div>
+                <div className="text-xs px-2.5 py-1 rounded-lg" style={{ background: 'rgba(30,58,95,0.04)', color: 'rgba(26,26,46,0.55)' }}>{details.students} students</div>
               </div>
             </div>
           </div>
-          <p className="text-base leading-relaxed" style={{ color: 'rgba(245,245,248,0.55)' }}>{details.description}</p>
+          <p className="text-base leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>{details.description}</p>
         </motion.div>
 
         {/* Quick stats */}
@@ -203,8 +203,8 @@ export default function UniversityPage() {
             return (
               <div key={i} className="glass rounded-xl p-4 text-center">
                 <Icon size={16} color={uni.color} className="mx-auto mb-2" />
-                <div className="text-xs mb-1" style={{ color: 'rgba(245,245,248,0.4)' }}>{s.label}</div>
-                <div className="font-bold text-white text-sm">{s.value}</div>
+                <div className="text-xs mb-1" style={{ color: 'rgba(26,26,46,0.45)' }}>{s.label}</div>
+                <div className="font-bold text-[#1A1A2E] text-sm">{s.value}</div>
               </div>
             )
           })}
@@ -212,14 +212,14 @@ export default function UniversityPage() {
 
         {/* Top programs */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="glass rounded-2xl p-7 mb-8">
-          <h2 className="text-xl font-bold text-white mb-5">Top Programs for Indian Students</h2>
+          <h2 className="text-xl font-bold text-[#1A1A2E] mb-5">Top Programs for Indian Students</h2>
           <div className="space-y-3">
             {details.topPrograms.map((p, i) => (
-              <div key={i} className="flex items-center justify-between py-3 px-4 rounded-xl" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
+              <div key={i} className="flex items-center justify-between py-3 px-4 rounded-xl" style={{ background: 'rgba(30,58,95,0.02)', border: '1px solid rgba(30,58,95,0.06)' }}>
                 <span className="font-semibold text-white text-sm">{p.name}</span>
                 <div className="flex gap-2 flex-shrink-0 ml-3">
-                  <div className="text-xs px-2 py-0.5 rounded-md" style={{ background: p.lang === 'English' ? 'rgba(52,211,153,0.1)' : 'rgba(201,164,109,0.1)', color: p.lang === 'English' ? '#34D399' : '#C9A46D' }}>{p.lang}</div>
-                  <div className="text-xs px-2 py-0.5 rounded-md" style={{ background: 'rgba(91,140,255,0.1)', color: '#5B8CFF' }}>{p.duration}</div>
+                  <div className="text-xs px-2 py-0.5 rounded-md" style={{ background: p.lang === 'English' ? 'rgba(45,106,79,0.1)' : 'rgba(30,58,95,0.08)', color: p.lang === 'English' ? '#2D6A4F' : '#1E3A5F' }}>{p.lang}</div>
+                  <div className="text-xs px-2 py-0.5 rounded-md" style={{ background: 'rgba(30,58,95,0.08)', color: '#1E3A5F' }}>{p.duration}</div>
                 </div>
               </div>
             ))}
@@ -228,19 +228,19 @@ export default function UniversityPage() {
 
         {/* Admission & Application */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="glass rounded-2xl p-7 mb-8">
-          <h2 className="text-xl font-bold text-white mb-5">Admission & Application</h2>
+          <h2 className="text-xl font-bold text-[#1A1A2E] mb-5">Admission & Application</h2>
           <div className="space-y-4">
-            <div className="rounded-xl p-4" style={{ background: 'rgba(201,164,109,0.06)', border: '1px solid rgba(201,164,109,0.15)' }}>
-              <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: '#C9A46D' }}>Requirements for Indian Students</div>
-              <p className="text-sm" style={{ color: 'rgba(245,245,248,0.65)' }}>{details.admissionReqs}</p>
+            <div className="rounded-xl p-4" style={{ background: 'rgba(30,58,95,0.05)', border: '1px solid rgba(30,58,95,0.12)' }}>
+              <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: '#1E3A5F' }}>Requirements for Indian Students</div>
+              <p className="text-sm" style={{ color: 'rgba(26,26,46,0.7)' }}>{details.admissionReqs}</p>
             </div>
-            <div className="flex items-center justify-between py-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              <span className="text-sm" style={{ color: 'rgba(245,245,248,0.5)' }}>Application Deadline</span>
-              <span className="font-bold text-white text-sm">{details.applicationDeadline}</span>
+            <div className="flex items-center justify-between py-3" style={{ borderBottom: '1px solid rgba(30,58,95,0.04)' }}>
+              <span className="text-sm" style={{ color: 'rgba(26,26,46,0.55)' }}>Application Deadline</span>
+              <span className="font-bold text-[#1A1A2E] text-sm">{details.applicationDeadline}</span>
             </div>
             <div className="flex items-center justify-between py-3">
-              <span className="text-sm" style={{ color: 'rgba(245,245,248,0.5)' }}>Acceptance Rate (Intl.)</span>
-              <span className="font-bold text-white text-sm">{details.acceptanceRate}</span>
+              <span className="text-sm" style={{ color: 'rgba(26,26,46,0.55)' }}>Acceptance Rate (Intl.)</span>
+              <span className="font-bold text-[#1A1A2E] text-sm">{details.acceptanceRate}</span>
             </div>
           </div>
           <a href={details.website} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-lg" style={{ color: uni.color, background: `${uni.color}10`, border: `1px solid ${uni.color}20` }}>
@@ -250,7 +250,7 @@ export default function UniversityPage() {
 
         {/* City info */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="glass rounded-2xl p-7 mb-8">
-          <h2 className="text-xl font-bold text-white mb-5 flex items-center gap-2">
+          <h2 className="text-xl font-bold text-[#1A1A2E] mb-5 flex items-center gap-2">
             <MapPin size={18} color={uni.color} /> Life in {details.cityInfo.city}
           </h2>
           <div className="space-y-3">
@@ -259,9 +259,9 @@ export default function UniversityPage() {
               { label: 'Public Transport', value: details.cityInfo.transport },
               { label: 'Indian Community', value: details.cityInfo.indianCommunity },
             ].map((item, i) => (
-              <div key={i} className="flex items-start justify-between py-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                <span className="text-sm" style={{ color: 'rgba(245,245,248,0.5)' }}>{item.label}</span>
-                <span className="text-sm font-semibold text-white text-right ml-4">{item.value}</span>
+              <div key={i} className="flex items-start justify-between py-3" style={{ borderBottom: '1px solid rgba(30,58,95,0.04)' }}>
+                <span className="text-sm" style={{ color: 'rgba(26,26,46,0.55)' }}>{item.label}</span>
+                <span className="text-sm font-semibold text-[#1A1A2E] text-right ml-4">{item.value}</span>
               </div>
             ))}
           </div>
@@ -269,22 +269,22 @@ export default function UniversityPage() {
 
         {/* Compare other universities */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="glass rounded-2xl p-7 mb-10">
-          <h2 className="text-xl font-bold text-white mb-5">Other Universities to Consider</h2>
+          <h2 className="text-xl font-bold text-[#1A1A2E] mb-5">Other Universities to Consider</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {universities.filter(u => u.abbr !== uni.abbr).slice(0, 4).map(u => (
-              <Link key={u.abbr} to={`/universities/${u.abbr.toLowerCase().replace(/\s+/g, '-')}`} className="rounded-xl p-3 text-center hover-card" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
+              <Link key={u.abbr} to={`/universities/${u.abbr.toLowerCase().replace(/\s+/g, '-')}`} className="rounded-xl p-3 text-center hover-card" style={{ background: 'rgba(30,58,95,0.02)', border: '1px solid rgba(30,58,95,0.06)' }}>
                 <div className="font-bold text-sm mb-1" style={{ color: u.color }}>{u.abbr}</div>
-                <div className="text-xs" style={{ color: 'rgba(245,245,248,0.4)' }}>{u.city.split(',')[0]}</div>
+                <div className="text-xs" style={{ color: 'rgba(26,26,46,0.45)' }}>{u.city.split(',')[0]}</div>
               </Link>
             ))}
           </div>
         </motion.div>
 
         {/* Next step */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(201,164,109,0.08), rgba(91,140,255,0.05))', border: '1px solid rgba(201,164,109,0.15)' }}>
-          <h3 className="text-xl font-bold text-white mb-2">Ready to apply? Start with APS</h3>
-          <p className="text-sm mb-6" style={{ color: 'rgba(245,245,248,0.5)' }}>All German universities require the APS certificate. Don't miss your deadline.</p>
-          <Link to="/aps" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'linear-gradient(135deg, #C9A46D, #A07840)', color: '#07070D' }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(45,106,79,0.08), rgba(91,140,255,0.05))', border: '1px solid rgba(30,58,95,0.12)' }}>
+          <h3 className="text-xl font-bold text-[#1A1A2E] mb-2">Ready to apply? Start with APS</h3>
+          <p className="text-sm mb-6" style={{ color: 'rgba(26,26,46,0.55)' }}>All German universities require the APS certificate. Don't miss your deadline.</p>
+          <Link to="/aps" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF' }}>
             APS Certificate Guide →
           </Link>
         </motion.div>

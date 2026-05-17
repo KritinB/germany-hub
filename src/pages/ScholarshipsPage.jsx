@@ -8,19 +8,19 @@ const applicationTips = [
   {
     title: 'Start 12–18 months before your target semester',
     desc: 'Most major scholarships (DAAD, foundation scholarships) have deadlines 12–15 months before the academic year starts. Missing the deadline means waiting a full year.',
-    color: '#C9A46D',
+    color: '#1E3A5F',
     icon: Clock,
   },
   {
     title: 'Write a tailored Statement of Purpose for each scholarship',
     desc: 'Generic SOPs fail. DAAD wants to see academic excellence and research goals. FES wants social democratic engagement. Each scholarship has a value system — align your narrative to it.',
-    color: '#5B8CFF',
+    color: '#1E3A5F',
     icon: FileText,
   },
   {
     title: 'Get strong letters of recommendation',
     desc: 'Foundation scholarships (FES, KAS, Böll) require 2–3 LORs. Ask professors who genuinely know your work, not generic department heads. Give them 6–8 weeks and your SOP for context.',
-    color: '#34D399',
+    color: '#2D6A4F',
     icon: Users,
   },
   {
@@ -64,22 +64,22 @@ const sopStructure = [
 
 export default function ScholarshipsPage() {
   return (
-    <div style={{ background: '#07070D', minHeight: '100vh' }}>
+    <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
       <Navbar />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
 
-        <Link to="/#scholarships" className="inline-flex items-center gap-2 mb-8 text-sm font-medium" style={{ color: 'rgba(245,245,248,0.5)' }}>
+        <Link to="/#scholarships" className="inline-flex items-center gap-2 mb-8 text-sm font-medium" style={{ color: 'rgba(26,26,46,0.55)' }}>
           <ArrowLeft size={15} /> Back to Guide
         </Link>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-12">
           <div className="chip chip-gold inline-flex mb-4">Scholarships — Deep Dive</div>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.02em' }}>
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
             Scholarship Guide —<br />
             <span className="text-gold-gradient">Applications, SOPs & Strategy</span>
           </h1>
-          <p className="text-base leading-relaxed" style={{ color: 'rgba(245,245,248,0.55)' }}>
+          <p className="text-base leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>
             Germany offers some of the most generous scholarships for Indian students. This guide covers every
             major program, how to apply, how to write a winning SOP, and common mistakes.
           </p>
@@ -90,11 +90,11 @@ export default function ScholarshipsPage() {
           <h2 className="text-2xl font-bold text-white mb-6">All Major Scholarships for Indian Students</h2>
           <div className="grid md:grid-cols-2 gap-5">
             {scholarships.map((s, i) => (
-              <div key={s.name} className="glass rounded-2xl p-6 flex flex-col" style={s.highlight ? { border: '1px solid rgba(201,164,109,0.25)' } : {}}>
+              <div key={s.name} className="glass rounded-2xl p-6 flex flex-col" style={s.highlight ? { border: '1px solid rgba(30,58,95,0.2)' } : {}}>
                 <div className="flex items-start justify-between mb-3">
                   <div>
                     <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: s.color }}>{s.org}</div>
-                    <h3 className="font-bold text-white">{s.name}</h3>
+                    <h3 className="font-bold text-[#1A1A2E]">{s.name}</h3>
                   </div>
                   <a href={s.url} target="_blank" rel="noopener noreferrer" className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center ml-2" style={{ background: `${s.color}12`, border: `1px solid ${s.color}25`, color: s.color }}>
                     <ExternalLink size={13} />
@@ -106,7 +106,7 @@ export default function ScholarshipsPage() {
                   <span className="font-bold text-sm" style={{ color: s.color }}>{s.amount}</span>
                 </div>
 
-                <p className="text-sm mb-3 flex-1 leading-relaxed" style={{ color: 'rgba(245,245,248,0.55)' }}>{s.desc}</p>
+                <p className="text-sm mb-3 flex-1 leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>{s.desc}</p>
 
                 <div className="flex flex-wrap gap-1.5 mb-3">
                   {s.level.map((l, j) => (
@@ -114,12 +114,12 @@ export default function ScholarshipsPage() {
                   ))}
                 </div>
 
-                <div className="space-y-2 pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-                  <div className="flex items-start gap-2 text-xs" style={{ color: 'rgba(245,245,248,0.45)' }}>
+                <div className="space-y-2 pt-3" style={{ borderTop: '1px solid rgba(30,58,95,0.06)' }}>
+                  <div className="flex items-start gap-2 text-xs" style={{ color: 'rgba(26,26,46,0.5)' }}>
                     <Calendar size={11} className="mt-0.5 flex-shrink-0" style={{ color: s.color }} />
                     <span>Deadline: {s.deadline}</span>
                   </div>
-                  <div className="flex items-start gap-2 text-xs" style={{ color: 'rgba(245,245,248,0.45)' }}>
+                  <div className="flex items-start gap-2 text-xs" style={{ color: 'rgba(26,26,46,0.5)' }}>
                     <Users size={11} className="mt-0.5 flex-shrink-0" style={{ color: s.color }} />
                     <span>{s.eligibility}</span>
                   </div>
@@ -130,18 +130,18 @@ export default function ScholarshipsPage() {
         </motion.div>
 
         {/* DAAD deep dive */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="glass rounded-2xl p-8 mb-10" style={{ border: '1px solid rgba(201,164,109,0.2)' }}>
-          <h2 className="text-xl font-bold text-white mb-2">DAAD Programs for Indian Students — Deep Dive</h2>
-          <p className="text-sm mb-6" style={{ color: 'rgba(245,245,248,0.5)' }}>DAAD (Deutscher Akademischer Austauschdienst) is Germany's primary international scholarship body and the most accessible for Indian students.</p>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="glass rounded-2xl p-8 mb-10" style={{ border: '1px solid rgba(30,58,95,0.18)' }}>
+          <h2 className="text-xl font-bold text-[#1A1A2E] mb-2">DAAD Programs for Indian Students — Deep Dive</h2>
+          <p className="text-sm mb-6" style={{ color: 'rgba(26,26,46,0.55)' }}>DAAD (Deutscher Akademischer Austauschdienst) is Germany's primary international scholarship body and the most accessible for Indian students.</p>
 
           <div className="space-y-3 mb-8">
             {daadDetails.programs.map((p, i) => (
-              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
+              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(30,58,95,0.02)', border: '1px solid rgba(30,58,95,0.06)' }}>
                 <div className="flex items-start justify-between gap-3 mb-2">
-                  <h4 className="font-bold text-white text-sm">{p.name}</h4>
-                  <div className="text-xs font-mono font-bold flex-shrink-0" style={{ color: '#C9A46D' }}>{p.amount}</div>
+                  <h4 className="font-bold text-[#1A1A2E] text-sm">{p.name}</h4>
+                  <div className="text-xs font-mono font-bold flex-shrink-0" style={{ color: '#1E3A5F' }}>{p.amount}</div>
                 </div>
-                <div className="flex flex-wrap gap-3 text-xs" style={{ color: 'rgba(245,245,248,0.45)' }}>
+                <div className="flex flex-wrap gap-3 text-xs" style={{ color: 'rgba(26,26,46,0.5)' }}>
                   <span><Users size={10} className="inline mr-1" />{p.level}</span>
                   <span><Calendar size={10} className="inline mr-1" />Deadline: {p.deadline}</span>
                 </div>
@@ -149,12 +149,12 @@ export default function ScholarshipsPage() {
             ))}
           </div>
 
-          <h3 className="font-bold text-white mb-4">DAAD Application Tips</h3>
+          <h3 className="font-bold text-[#1A1A2E] mb-4">DAAD Application Tips</h3>
           <div className="space-y-2">
             {daadDetails.tips.map((tip, i) => (
               <div key={i} className="flex items-start gap-3">
-                <CheckCircle2 size={14} color="#C9A46D" className="flex-shrink-0 mt-0.5" />
-                <p className="text-sm" style={{ color: 'rgba(245,245,248,0.65)' }}>{tip}</p>
+                <CheckCircle2 size={14} color="#1E3A5F" className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm" style={{ color: 'rgba(26,26,46,0.7)' }}>{tip}</p>
               </div>
             ))}
           </div>
@@ -172,8 +172,8 @@ export default function ScholarshipsPage() {
                     <Icon size={18} color={tip.color} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white mb-1">{tip.title}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: 'rgba(245,245,248,0.55)' }}>{tip.desc}</p>
+                    <h3 className="font-bold text-[#1A1A2E] mb-1">{tip.title}</h3>
+                    <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>{tip.desc}</p>
                   </div>
                 </div>
               )
@@ -183,19 +183,19 @@ export default function ScholarshipsPage() {
 
         {/* SOP structure */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="glass rounded-2xl p-8 mb-10">
-          <h2 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-            <FileText size={18} color="#C9A46D" /> Statement of Purpose Structure
+          <h2 className="text-xl font-bold text-[#1A1A2E] mb-2 flex items-center gap-2">
+            <FileText size={18} color="#1E3A5F" /> Statement of Purpose Structure
           </h2>
-          <p className="text-sm mb-6" style={{ color: 'rgba(245,245,248,0.5)' }}>A well-structured SOP is typically 2 pages (500–800 words). Here's the blueprint:</p>
+          <p className="text-sm mb-6" style={{ color: 'rgba(26,26,46,0.55)' }}>A well-structured SOP is typically 2 pages (500–800 words). Here's the blueprint:</p>
           <div className="space-y-4">
             {sopStructure.map((s, i) => (
               <div key={i} className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-xl flex items-center justify-center font-bold text-sm" style={{ background: 'rgba(201,164,109,0.1)', border: '1px solid rgba(201,164,109,0.25)', color: '#C9A46D' }}>
+                <div className="flex-shrink-0 w-8 h-8 rounded-xl flex items-center justify-center font-bold text-sm" style={{ background: 'rgba(30,58,95,0.08)', border: '1px solid rgba(30,58,95,0.2)', color: '#1E3A5F' }}>
                   {i + 1}
                 </div>
                 <div>
-                  <div className="font-bold text-white text-sm mb-1">{s.section}</div>
-                  <p className="text-sm" style={{ color: 'rgba(245,245,248,0.55)' }}>{s.content}</p>
+                  <div className="font-bold text-[#1A1A2E] text-sm mb-1">{s.section}</div>
+                  <p className="text-sm" style={{ color: 'rgba(26,26,46,0.6)' }}>{s.content}</p>
                 </div>
               </div>
             ))}
@@ -204,7 +204,7 @@ export default function ScholarshipsPage() {
 
         {/* Timeline */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="glass rounded-2xl p-8 mb-10">
-          <h2 className="text-xl font-bold text-white mb-6">Scholarship Application Timeline</h2>
+          <h2 className="text-xl font-bold text-[#1A1A2E] mb-6">Scholarship Application Timeline</h2>
           <div className="space-y-4">
             {[
               { when: '18 months before', what: 'Research programs and identify which scholarships you\'re eligible for' },
@@ -216,24 +216,24 @@ export default function ScholarshipsPage() {
               { when: 'January–April', what: 'Scholarship decisions announced — begin university applications in parallel' },
             ].map((t, i) => (
               <div key={i} className="flex gap-4 items-start">
-                <div className="flex-shrink-0 text-xs font-bold font-mono px-3 py-1.5 rounded-lg" style={{ background: 'rgba(201,164,109,0.1)', color: '#C9A46D', border: '1px solid rgba(201,164,109,0.2)', minWidth: '130px', textAlign: 'center' }}>
+                <div className="flex-shrink-0 text-xs font-bold font-mono px-3 py-1.5 rounded-lg" style={{ background: 'rgba(30,58,95,0.08)', color: '#1E3A5F', border: '1px solid rgba(30,58,95,0.18)', minWidth: '130px', textAlign: 'center' }}>
                   {t.when}
                 </div>
-                <p className="text-sm pt-1" style={{ color: 'rgba(245,245,248,0.65)' }}>{t.what}</p>
+                <p className="text-sm pt-1" style={{ color: 'rgba(26,26,46,0.7)' }}>{t.what}</p>
               </div>
             ))}
           </div>
         </motion.div>
 
         {/* Next step */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(201,164,109,0.08), rgba(91,140,255,0.05))', border: '1px solid rgba(201,164,109,0.15)' }}>
-          <h3 className="text-xl font-bold text-white mb-2">Apply for APS first — scholarships come after</h3>
-          <p className="text-sm mb-6" style={{ color: 'rgba(245,245,248,0.5)' }}>You need an APS certificate before any German university will accept your application.</p>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(45,106,79,0.08), rgba(91,140,255,0.05))', border: '1px solid rgba(30,58,95,0.12)' }}>
+          <h3 className="text-xl font-bold text-[#1A1A2E] mb-2">Apply for APS first — scholarships come after</h3>
+          <p className="text-sm mb-6" style={{ color: 'rgba(26,26,46,0.55)' }}>You need an APS certificate before any German university will accept your application.</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/aps" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'linear-gradient(135deg, #C9A46D, #A07840)', color: '#07070D' }}>
+            <Link to="/aps" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF' }}>
               APS Certificate Guide →
             </Link>
-            <Link to="/programs/master" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'rgba(255,255,255,0.06)', color: '#F5F5F8', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <Link to="/programs/master" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'rgba(30,58,95,0.06)', color: '#1A1A2E', border: '1px solid rgba(30,58,95,0.08)' }}>
               Master's Programs Guide →
             </Link>
           </div>

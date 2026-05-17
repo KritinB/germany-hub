@@ -51,24 +51,24 @@ const timeline = [
 
 export default function APSPage() {
   return (
-    <div style={{ background: '#07070D', minHeight: '100vh' }}>
+    <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
       <Navbar />
 
       <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
 
         {/* Back */}
-        <Link to="/#aps" className="inline-flex items-center gap-2 mb-8 text-sm font-medium transition-all" style={{ color: 'rgba(245,245,248,0.5)' }}>
+        <Link to="/#aps" className="inline-flex items-center gap-2 mb-8 text-sm font-medium transition-all" style={{ color: 'rgba(26,26,46,0.55)' }}>
           <ArrowLeft size={15} /> Back to Guide
         </Link>
 
         {/* Hero */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-12">
           <div className="chip chip-gold inline-flex mb-4">APS Certificate — Deep Dive</div>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.02em' }}>
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-white" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
             Complete APS Guide —<br />
             <span className="text-gold-gradient">Everything You Need to Know</span>
           </h1>
-          <p className="text-base leading-relaxed" style={{ color: 'rgba(245,245,248,0.55)' }}>
+          <p className="text-base leading-relaxed" style={{ color: 'rgba(26,26,46,0.6)' }}>
             The APS (Akademische Prüfstelle) certificate is the single most critical document for Indian students
             applying to German universities. This guide covers the process, common mistakes, FAQs, and an exact timeline.
           </p>
@@ -85,22 +85,22 @@ export default function APSPage() {
             const Icon = f.icon
             return (
               <div key={i} className="glass rounded-2xl p-5 text-center">
-                <div className="w-10 h-10 rounded-xl mx-auto mb-3 flex items-center justify-center" style={{ background: 'rgba(201,164,109,0.1)', border: '1px solid rgba(201,164,109,0.2)' }}>
-                  <Icon size={18} color="#C9A46D" />
+                <div className="w-10 h-10 rounded-xl mx-auto mb-3 flex items-center justify-center" style={{ background: 'rgba(30,58,95,0.08)', border: '1px solid rgba(30,58,95,0.18)' }}>
+                  <Icon size={18} color="#1E3A5F" />
                 </div>
-                <div className="text-xs font-medium mb-1" style={{ color: 'rgba(245,245,248,0.4)' }}>{f.label}</div>
+                <div className="text-xs font-medium mb-1" style={{ color: 'rgba(26,26,46,0.45)' }}>{f.label}</div>
                 <div className="text-xl font-extrabold text-gold-gradient">{f.value}</div>
-                <div className="text-xs mt-1" style={{ color: 'rgba(245,245,248,0.4)' }}>{f.sub}</div>
+                <div className="text-xs mt-1" style={{ color: 'rgba(26,26,46,0.45)' }}>{f.sub}</div>
               </div>
             )
           })}
         </motion.div>
 
         {/* Alert */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="rounded-2xl p-5 flex gap-4 mb-10" style={{ background: 'rgba(201,164,109,0.08)', border: '1px solid rgba(201,164,109,0.2)' }}>
-          <AlertCircle size={20} color="#C9A46D" className="flex-shrink-0 mt-0.5" />
-          <div className="text-sm" style={{ color: 'rgba(245,245,248,0.75)' }}>
-            <span className="font-bold text-white">Start the APS process 3–4 months before your application deadline.</span>{' '}
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="rounded-2xl p-5 flex gap-4 mb-10" style={{ background: 'rgba(45,106,79,0.08)', border: '1px solid rgba(30,58,95,0.18)' }}>
+          <AlertCircle size={20} color="#1E3A5F" className="flex-shrink-0 mt-0.5" />
+          <div className="text-sm" style={{ color: 'rgba(26,26,46,0.8)' }}>
+            <span className="font-bold text-[#1A1A2E]">Start the APS process 3–4 months before your application deadline.</span>{' '}
             Processing takes 4–8 weeks, and German universities will not review your application without a valid APS certificate.
           </div>
         </motion.div>
@@ -111,15 +111,15 @@ export default function APSPage() {
           <div className="space-y-4">
             {steps.map((step, i) => (
               <div key={step.num} className="glass rounded-2xl p-6 flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center font-mono font-bold text-xs" style={{ background: 'rgba(201,164,109,0.1)', border: '1px solid rgba(201,164,109,0.25)', color: '#C9A46D' }}>
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center font-mono font-bold text-xs" style={{ background: 'rgba(30,58,95,0.08)', border: '1px solid rgba(30,58,95,0.2)', color: '#1E3A5F' }}>
                   {step.num}
                 </div>
                 <div>
-                  <h3 className="font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-sm mb-3 leading-relaxed" style={{ color: 'rgba(245,245,248,0.5)' }}>{step.desc}</p>
+                  <h3 className="font-bold text-[#1A1A2E] mb-2">{step.title}</h3>
+                  <p className="text-sm mb-3 leading-relaxed" style={{ color: 'rgba(26,26,46,0.55)' }}>{step.desc}</p>
                   <div className="flex flex-wrap gap-2">
                     {step.details.map((d, j) => (
-                      <div key={j} className="text-xs px-2.5 py-1 rounded-lg" style={{ background: 'rgba(201,164,109,0.08)', color: '#C9A46D', border: '1px solid rgba(201,164,109,0.15)' }}>{d}</div>
+                      <div key={j} className="text-xs px-2.5 py-1 rounded-lg" style={{ background: 'rgba(45,106,79,0.08)', color: '#1E3A5F', border: '1px solid rgba(30,58,95,0.12)' }}>{d}</div>
                     ))}
                   </div>
                 </div>
@@ -130,14 +130,14 @@ export default function APSPage() {
 
         {/* Timeline */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="glass rounded-2xl p-8 mb-10">
-          <h2 className="text-xl font-bold text-white mb-6">Realistic Timeline</h2>
+          <h2 className="text-xl font-bold text-[#1A1A2E] mb-6">Realistic Timeline</h2>
           <div className="space-y-4">
             {timeline.map((t, i) => (
               <div key={i} className="flex gap-4 items-start">
-                <div className="flex-shrink-0 text-xs font-bold font-mono px-3 py-1.5 rounded-lg" style={{ background: 'rgba(201,164,109,0.1)', color: '#C9A46D', border: '1px solid rgba(201,164,109,0.2)', minWidth: '80px', textAlign: 'center' }}>
+                <div className="flex-shrink-0 text-xs font-bold font-mono px-3 py-1.5 rounded-lg" style={{ background: 'rgba(30,58,95,0.08)', color: '#1E3A5F', border: '1px solid rgba(30,58,95,0.18)', minWidth: '80px', textAlign: 'center' }}>
                   {t.week}
                 </div>
-                <p className="text-sm pt-1" style={{ color: 'rgba(245,245,248,0.65)' }}>{t.action}</p>
+                <p className="text-sm pt-1" style={{ color: 'rgba(26,26,46,0.7)' }}>{t.action}</p>
               </div>
             ))}
           </div>
@@ -145,14 +145,14 @@ export default function APSPage() {
 
         {/* Common mistakes */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="glass rounded-2xl p-8 mb-10">
-          <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <h2 className="text-xl font-bold text-[#1A1A2E] mb-6 flex items-center gap-2">
             <XCircle size={18} color="#F472B6" /> Common Mistakes to Avoid
           </h2>
           <div className="space-y-3">
             {mistakes.map((m, i) => (
               <div key={i} className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-2 h-2 rounded-full mt-1.5" style={{ background: m.severity === 'high' ? '#F472B6' : '#FB923C' }} />
-                <p className="text-sm" style={{ color: 'rgba(245,245,248,0.65)' }}>{m.text}</p>
+                <p className="text-sm" style={{ color: 'rgba(26,26,46,0.7)' }}>{m.text}</p>
                 <span className="flex-shrink-0 text-xs px-2 py-0.5 rounded-md" style={{ background: m.severity === 'high' ? 'rgba(244,114,182,0.1)' : 'rgba(251,146,60,0.1)', color: m.severity === 'high' ? '#F472B6' : '#FB923C' }}>
                   {m.severity}
                 </span>
@@ -163,8 +163,8 @@ export default function APSPage() {
 
         {/* Interview tips */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.33 }} className="glass rounded-2xl p-8 mb-10">
-          <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-            <Lightbulb size={18} color="#C9A46D" /> APS Interview Tips
+          <h2 className="text-xl font-bold text-[#1A1A2E] mb-6 flex items-center gap-2">
+            <Lightbulb size={18} color="#1E3A5F" /> APS Interview Tips
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
@@ -176,8 +176,8 @@ export default function APSPage() {
               'If online, test your internet, camera, and microphone at least 30 minutes before',
             ].map((tip, i) => (
               <div key={i} className="flex items-start gap-3">
-                <CheckCircle2 size={14} color="#C9A46D" className="flex-shrink-0 mt-0.5" />
-                <p className="text-sm" style={{ color: 'rgba(245,245,248,0.6)' }}>{tip}</p>
+                <CheckCircle2 size={14} color="#1E3A5F" className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm" style={{ color: 'rgba(26,26,46,0.65)' }}>{tip}</p>
               </div>
             ))}
           </div>
@@ -186,13 +186,13 @@ export default function APSPage() {
         {/* FAQs */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.36 }} className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-            <HelpCircle size={20} color="#C9A46D" /> Frequently Asked Questions
+            <HelpCircle size={20} color="#1E3A5F" /> Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <div key={i} className="glass rounded-2xl p-6">
-                <h3 className="font-bold text-white mb-3">{faq.q}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: 'rgba(245,245,248,0.6)' }}>{faq.a}</p>
+                <h3 className="font-bold text-[#1A1A2E] mb-3">{faq.q}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.65)' }}>{faq.a}</p>
               </div>
             ))}
           </div>
@@ -201,30 +201,30 @@ export default function APSPage() {
         {/* Offices */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="glass rounded-2xl p-8 mb-10">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-white">APS India Office Locations</h2>
-            <a href="https://www.aps-india.de" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg" style={{ color: '#C9A46D', background: 'rgba(201,164,109,0.1)', border: '1px solid rgba(201,164,109,0.2)' }}>
+            <h2 className="text-xl font-bold text-[#1A1A2E]">APS India Office Locations</h2>
+            <a href="https://www.aps-india.de" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg" style={{ color: '#1E3A5F', background: 'rgba(30,58,95,0.08)', border: '1px solid rgba(30,58,95,0.18)' }}>
               Official Site <ExternalLink size={11} />
             </a>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             {offices.map((o, i) => (
-              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
+              <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(30,58,95,0.02)', border: '1px solid rgba(30,58,95,0.06)' }}>
                 <div className="flex items-center gap-2 mb-2">
-                  <MapPin size={14} color="#C9A46D" />
+                  <MapPin size={14} color="#1E3A5F" />
                   <span className="font-semibold text-white text-sm">{o.city}</span>
                 </div>
-                <p className="text-xs mb-2" style={{ color: 'rgba(245,245,248,0.45)' }}>{o.address}</p>
-                <div className="text-xs px-2 py-1 rounded-md inline-block" style={{ background: 'rgba(201,164,109,0.08)', color: '#C9A46D' }}>{o.note}</div>
+                <p className="text-xs mb-2" style={{ color: 'rgba(26,26,46,0.5)' }}>{o.address}</p>
+                <div className="text-xs px-2 py-1 rounded-md inline-block" style={{ background: 'rgba(45,106,79,0.08)', color: '#1E3A5F' }}>{o.note}</div>
               </div>
             ))}
           </div>
         </motion.div>
 
         {/* Next step */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(201,164,109,0.08), rgba(91,140,255,0.05))', border: '1px solid rgba(201,164,109,0.15)' }}>
-          <h3 className="text-xl font-bold text-white mb-2">Got your APS? Next up: the Student Visa</h3>
-          <p className="text-sm mb-6" style={{ color: 'rgba(245,245,248,0.5)' }}>Once your APS certificate arrives, you can apply for your student visa. Book your VFS appointment immediately.</p>
-          <Link to="/visa" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'linear-gradient(135deg, #C9A46D, #A07840)', color: '#07070D' }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="rounded-2xl p-8 text-center" style={{ background: 'linear-gradient(135deg, rgba(45,106,79,0.08), rgba(91,140,255,0.05))', border: '1px solid rgba(30,58,95,0.12)' }}>
+          <h3 className="text-xl font-bold text-[#1A1A2E] mb-2">Got your APS? Next up: the Student Visa</h3>
+          <p className="text-sm mb-6" style={{ color: 'rgba(26,26,46,0.55)' }}>Once your APS certificate arrives, you can apply for your student visa. Book your VFS appointment immediately.</p>
+          <Link to="/visa" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm" style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF' }}>
             Student Visa Guide →
           </Link>
         </motion.div>

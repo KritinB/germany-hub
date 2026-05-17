@@ -8,8 +8,8 @@ export const programs = [
     id: 'bachelor',
     label: "Bachelor's",
     duration: '3–4 years',
-    tagColor: '#C9A46D',
-    tagBg: 'rgba(201,164,109,0.1)',
+    tagColor: '#1E3A5F',
+    tagBg: 'rgba(30,58,95,0.08)',
     intro: 'A German Bachelor\'s (Bachelorstudium) is typically 6–8 semesters. For Indian students, the key step is proving your Indian 12th-grade qualifies. Most universities require it through APS and Studienkolleg assessment.',
     requirements: [
       'APS Certificate (Akademische Prüfstelle)',
@@ -34,8 +34,8 @@ export const programs = [
     id: 'master',
     label: "Master's",
     duration: '2 years',
-    tagColor: '#5B8CFF',
-    tagBg: 'rgba(91,140,255,0.1)',
+    tagColor: '#1E3A5F',
+    tagBg: 'rgba(30,58,95,0.08)',
     intro: 'Germany is the #1 destination for international Master\'s students. Over 1,500 English-taught Master\'s programs are available. With a Bachelor\'s degree from India (4-year or 3-year), you are generally directly eligible.',
     requirements: [
       'APS Certificate (Akademische Prüfstelle) — mandatory',
@@ -63,8 +63,8 @@ export const programs = [
     id: 'phd',
     label: 'PhD',
     duration: '3–5 years',
-    tagColor: '#34D399',
-    tagBg: 'rgba(52,211,153,0.1)',
+    tagColor: '#2D6A4F',
+    tagBg: 'rgba(45,106,79,0.1)',
     intro: 'German PhDs (Promotionsprogramm) are typically research-based and often come with a paid research assistant (Wissenschaftlicher Mitarbeiter) position. Unlike UK/US, German PhDs often don\'t require a taught coursework phase.',
     requirements: [
       'Master\'s degree in relevant field (typically required)',
@@ -105,11 +105,11 @@ export default function Programs() {
           className="text-center mb-12"
         >
           <div className="chip chip-blue inline-flex mb-5">Study Programs</div>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.02em' }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5" style={{ letterSpacing: '-0.02em', color: '#1A1A2E' }}>
             Choose your{' '}
             <span className="text-gold-gradient">academic path</span>
           </h2>
-          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(245,245,248,0.5)' }}>
+          <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(26,26,46,0.55)' }}>
             Each program level has different requirements and advantages.
             Explore what fits your profile.
           </p>
@@ -123,21 +123,21 @@ export default function Programs() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex justify-center mb-8"
         >
-          <div className="flex gap-1 p-1 rounded-2xl" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="flex gap-1 p-1 rounded-2xl" style={{ background: 'rgba(30,58,95,0.03)', border: '1px solid rgba(30,58,95,0.08)' }}>
             {programs.map((p) => (
               <button
                 key={p.id}
                 onClick={() => setActive(p.id)}
                 className="relative px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300"
                 style={{
-                  color: active === p.id ? '#07070D' : 'rgba(245,245,248,0.5)',
+                  color: active === p.id ? '#F8FAFC' : 'rgba(26,26,46,0.55)',
                 }}
               >
                 {active === p.id && (
                   <motion.div
                     layoutId="tab-bg"
                     className="absolute inset-0 rounded-xl"
-                    style={{ background: 'linear-gradient(135deg, #C9A46D, #A07840)' }}
+                    style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)' }}
                     transition={{ type: 'spring', bounce: 0.2, duration: 0.5 }}
                   />
                 )}
@@ -167,18 +167,18 @@ export default function Programs() {
                     <BookOpen size={18} color={prog.tagColor} />
                   </div>
                   <div>
-                    <div className="font-bold text-white">{prog.label} Degree</div>
+                    <div className="font-bold text-[#1A1A2E]">{prog.label} Degree</div>
                     <div className="text-xs" style={{ color: prog.tagColor }}>
                       <Clock size={11} className="inline mr-1" />{prog.duration}
                     </div>
                   </div>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'rgba(245,245,248,0.6)' }}>{prog.intro}</p>
+                <p className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.65)' }}>{prog.intro}</p>
               </div>
 
               {/* Requirements */}
               <div className="glass rounded-2xl p-7">
-                <h3 className="font-bold text-white mb-5 flex items-center gap-2">
+                <h3 className="font-bold text-[#1A1A2E] mb-5 flex items-center gap-2">
                   <CheckCircle2 size={16} color={prog.tagColor} />
                   Requirements Checklist
                 </h3>
@@ -194,7 +194,7 @@ export default function Programs() {
                       <div className="w-5 h-5 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0" style={{ background: `${prog.tagColor}15`, border: `1px solid ${prog.tagColor}30` }}>
                         <div className="w-1.5 h-1.5 rounded-full" style={{ background: prog.tagColor }} />
                       </div>
-                      <span className="text-sm leading-relaxed" style={{ color: 'rgba(245,245,248,0.65)' }}>{req}</span>
+                      <span className="text-sm leading-relaxed" style={{ color: 'rgba(26,26,46,0.7)' }}>{req}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -203,7 +203,7 @@ export default function Programs() {
               {/* Note */}
               <div
                 className="rounded-2xl p-5 text-sm leading-relaxed"
-                style={{ background: `${prog.tagColor}08`, border: `1px solid ${prog.tagColor}20`, color: 'rgba(245,245,248,0.7)' }}
+                style={{ background: `${prog.tagColor}08`, border: `1px solid ${prog.tagColor}20`, color: 'rgba(26,26,46,0.75)' }}
               >
                 {prog.note}
               </div>
@@ -214,13 +214,13 @@ export default function Programs() {
 
               {/* Key facts */}
               <div className="glass rounded-2xl p-6">
-                <h3 className="font-bold text-white mb-5 text-sm uppercase tracking-widest" style={{ color: 'rgba(245,245,248,0.5)', fontSize: '11px' }}>
+                <h3 className="font-bold text-[#1A1A2E] mb-5 text-sm uppercase tracking-widest" style={{ color: 'rgba(26,26,46,0.55)', fontSize: '11px' }}>
                   At a Glance
                 </h3>
                 <div className="space-y-3">
                   {prog.keyPoints.map((kp, i) => (
-                    <div key={i} className="flex items-start justify-between gap-4 py-2.5" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                      <span className="text-xs font-medium" style={{ color: 'rgba(245,245,248,0.4)' }}>{kp.label}</span>
+                    <div key={i} className="flex items-start justify-between gap-4 py-2.5" style={{ borderBottom: '1px solid rgba(30,58,95,0.04)' }}>
+                      <span className="text-xs font-medium" style={{ color: 'rgba(26,26,46,0.45)' }}>{kp.label}</span>
                       <span className="text-xs font-semibold text-right" style={{ color: prog.tagColor }}>{kp.value}</span>
                     </div>
                   ))}
@@ -229,7 +229,7 @@ export default function Programs() {
 
               {/* Popular fields */}
               <div className="glass rounded-2xl p-6">
-                <h3 className="font-bold mb-4 text-sm uppercase tracking-widest" style={{ color: 'rgba(245,245,248,0.4)', fontSize: '11px' }}>
+                <h3 className="font-bold mb-4 text-sm uppercase tracking-widest" style={{ color: 'rgba(26,26,46,0.45)', fontSize: '11px' }}>
                   Popular Fields for Indians
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -251,26 +251,26 @@ export default function Programs() {
 
               {/* Application timing */}
               <div className="glass rounded-2xl p-6">
-                <h3 className="font-bold mb-4 text-sm uppercase tracking-widest" style={{ color: 'rgba(245,245,248,0.4)', fontSize: '11px' }}>
+                <h3 className="font-bold mb-4 text-sm uppercase tracking-widest" style={{ color: 'rgba(26,26,46,0.45)', fontSize: '11px' }}>
                   Application Windows
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#C9A46D' }} />
+                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#1E3A5F' }} />
                     <div>
-                      <div className="text-sm font-semibold text-white">Winter Semester (Oct)</div>
-                      <div className="text-xs" style={{ color: 'rgba(245,245,248,0.45)' }}>Apply: Dec – Jul (varies by uni)</div>
+                      <div className="text-sm font-semibold text-[#1A1A2E]">Winter Semester (Oct)</div>
+                      <div className="text-xs" style={{ color: 'rgba(26,26,46,0.5)' }}>Apply: Dec – Jul (varies by uni)</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#5B8CFF' }} />
+                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#1E3A5F' }} />
                     <div>
-                      <div className="text-sm font-semibold text-white">Summer Semester (Apr)</div>
-                      <div className="text-xs" style={{ color: 'rgba(245,245,248,0.45)' }}>Apply: Jul – Jan (fewer programs)</div>
+                      <div className="text-sm font-semibold text-[#1A1A2E]">Summer Semester (Apr)</div>
+                      <div className="text-xs" style={{ color: 'rgba(26,26,46,0.5)' }}>Apply: Jul – Jan (fewer programs)</div>
                     </div>
                   </div>
-                  <div className="mt-3 pt-3 flex items-start gap-2 text-xs" style={{ borderTop: '1px solid rgba(255,255,255,0.05)', color: 'rgba(245,245,248,0.45)' }}>
-                    <ChevronRight size={12} className="mt-0.5 flex-shrink-0" style={{ color: '#C9A46D' }} />
+                  <div className="mt-3 pt-3 flex items-start gap-2 text-xs" style={{ borderTop: '1px solid rgba(30,58,95,0.04)', color: 'rgba(26,26,46,0.5)' }}>
+                    <ChevronRight size={12} className="mt-0.5 flex-shrink-0" style={{ color: '#1E3A5F' }} />
                     Most programs only admit for Winter Semester. Always check specific university deadlines.
                   </div>
                 </div>
@@ -290,7 +290,7 @@ export default function Programs() {
           <Link
             to={`/programs/${active}`}
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-            style={{ background: 'linear-gradient(135deg, #C9A46D, #A07840)', color: '#07070D', boxShadow: '0 0 30px rgba(201,164,109,0.3)' }}
+            style={{ background: 'linear-gradient(135deg, #1E3A5F, #2E5082)', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(30,58,95,0.25)' }}
           >
             Full {prog.label} Guide — Application Tips & Strategy <ArrowRight size={15} />
           </Link>
