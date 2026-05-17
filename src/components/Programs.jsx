@@ -137,7 +137,7 @@ export default function Programs() {
                   <motion.div
                     layoutId="tab-bg"
                     className="absolute inset-0 rounded-xl"
-                    style={{ background: '#0A0A0A' }}
+                    style={{ background: '#CC1416' }}
                     transition={{ type: 'spring', bounce: 0.2, duration: 0.5 }}
                   />
                 )}
@@ -256,21 +256,21 @@ export default function Programs() {
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#0A0A0A' }} />
+                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#CC1416' }} />
                     <div>
                       <div className="text-sm font-semibold text-[#1A1A2E]">Winter Semester (Oct)</div>
                       <div className="text-xs" style={{ color: 'rgba(0,0,0,0.4)' }}>Apply: Dec – Jul (varies by uni)</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#0A0A0A' }} />
+                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#CC1416' }} />
                     <div>
                       <div className="text-sm font-semibold text-[#1A1A2E]">Summer Semester (Apr)</div>
                       <div className="text-xs" style={{ color: 'rgba(0,0,0,0.4)' }}>Apply: Jul – Jan (fewer programs)</div>
                     </div>
                   </div>
                   <div className="mt-3 pt-3 flex items-start gap-2 text-xs" style={{ borderTop: '1px solid rgba(0,0,0,0.02)', color: 'rgba(0,0,0,0.4)' }}>
-                    <ChevronRight size={12} className="mt-0.5 flex-shrink-0" style={{ color: '#0A0A0A' }} />
+                    <ChevronRight size={12} className="mt-0.5 flex-shrink-0" style={{ color: '#CC1416' }} />
                     Most programs only admit for Winter Semester. Always check specific university deadlines.
                   </div>
                 </div>
@@ -290,7 +290,7 @@ export default function Programs() {
           <Link
             to={`/programs/${active}`}
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-            style={{ background: '#0A0A0A', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
+            style={{ background: '#CC1416', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(204,20,22,0.25)' }}
           >
             Full {prog.label} Guide — Application Tips & Strategy <ArrowRight size={15} />
           </Link>

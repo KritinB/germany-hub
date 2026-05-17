@@ -167,7 +167,7 @@ export default function LifeInGermany() {
           viewport={{ once: true }}
           className="mb-8"
         >
-          <h3 className="text-2xl font-bold text-white text-center mb-8">
+          <h3 className="text-2xl font-bold text-center mb-8" style={{ color: '#1A1A1A' }}>
             Practical Guide for <span className="text-gold-gradient">Day 1 in Germany</span>
           </h3>
         </motion.div>
@@ -226,7 +226,7 @@ export default function LifeInGermany() {
           <Link
             to="/life"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-            style={{ background: '#0A0A0A', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
+            style={{ background: '#CC1416', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(204,20,22,0.25)' }}
           >
             Full Life Guide — Housing, Culture & More Cities <ArrowRight size={15} />
           </Link>

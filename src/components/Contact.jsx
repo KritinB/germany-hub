@@ -96,7 +96,7 @@ export default function Contact() {
                     required
                     placeholder="Your name"
                     style={inputStyle}
-                    onFocus={e => e.target.style.borderColor = 'rgba(201,164,109,0.5)'}
+                    onFocus={e => e.target.style.borderColor = 'rgba(204,20,22,0.4)'}
                     onBlur={e => e.target.style.borderColor = 'rgba(0,0,0,0.04)'}
                   />
                 </div>
@@ -110,7 +110,7 @@ export default function Contact() {
                     required
                     placeholder="your@email.com"
                     style={inputStyle}
-                    onFocus={e => e.target.style.borderColor = 'rgba(201,164,109,0.5)'}
+                    onFocus={e => e.target.style.borderColor = 'rgba(204,20,22,0.4)'}
                     onBlur={e => e.target.style.borderColor = 'rgba(0,0,0,0.04)'}
                   />
                 </div>
@@ -125,7 +125,7 @@ export default function Contact() {
                   required
                   placeholder="What's your question about?"
                   style={inputStyle}
-                  onFocus={e => e.target.style.borderColor = 'rgba(201,164,109,0.5)'}
+                  onFocus={e => e.target.style.borderColor = 'rgba(204,20,22,0.4)'}
                   onBlur={e => e.target.style.borderColor = 'rgba(0,0,0,0.04)'}
                 />
               </div>
@@ -140,7 +140,7 @@ export default function Contact() {
                   rows={5}
                   placeholder="Tell us more about your query..."
                   style={{ ...inputStyle, resize: 'vertical' }}
-                  onFocus={e => e.target.style.borderColor = 'rgba(201,164,109,0.5)'}
+                  onFocus={e => e.target.style.borderColor = 'rgba(204,20,22,0.4)'}
                   onBlur={e => e.target.style.borderColor = 'rgba(0,0,0,0.04)'}
                 />
               </div>
@@ -157,7 +157,7 @@ export default function Contact() {
                 disabled={status === 'sending'}
                 className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
                 style={{
-                  background: status === 'sending' ? 'rgba(201,164,109,0.4)' : 'linear-gradient(135deg, #0A0A0A, #333333)',
+                  background: status === 'sending' ? 'rgba(204,20,22,0.4)' : '#CC1416',
                   color: '#FFFFFF',
                   cursor: status === 'sending' ? 'not-allowed' : 'pointer',
                 }}

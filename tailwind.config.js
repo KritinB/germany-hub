@@ -4,17 +4,20 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Merriweather', 'Georgia', 'serif'],
+        mono: ['ui-monospace', 'monospace'],
       },
       colors: {
         bg: '#FFFFFF',
-        'bg-alt': '#F7F7F7',
+        'bg-alt': '#F8F8F8',
         surface: '#FFFFFF',
-        border: '#E8E8E8',
-        ink: '#0A0A0A',
+        border: '#E5E5E5',
+        ink: '#1A1A1A',
         muted: '#666666',
         subtle: '#999999',
+        red: '#CC1416',
+        dark: '#111111',
       },
       borderRadius: {
         pill: '100px',

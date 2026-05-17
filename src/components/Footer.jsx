@@ -39,7 +39,7 @@ export default function Footer() {
           className="rounded-3xl p-10 text-center mb-16"
           style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)' }}
         >
-          <span className="category-label" style={{ color: 'rgba(255,255,255,0.35)' }}>
+          <span className="category-label" style={{ color: 'rgba(204,20,22,0.7)' }}>
             Your next chapter
           </span>
           <h2
@@ -116,7 +116,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}>
+            <div className="w-7 h-7 rounded flex items-center justify-center" style={{ background: '#CC1416' }}>
               <span className="text-xs font-bold text-white">DE</span>
             </div>
             <span className="font-bold text-sm text-white">StudyDE</span>

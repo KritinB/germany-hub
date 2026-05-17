@@ -42,11 +42,9 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 right-0 z-50"
       style={{
-        background: 'rgba(255,255,255,0.95)',
-        backdropFilter: 'blur(16px)',
-        WebkitBackdropFilter: 'blur(16px)',
-        borderBottom: scrolled ? '1px solid #EEEEEE' : '1px solid transparent',
-        boxShadow: scrolled ? '0 1px 12px rgba(0,0,0,0.06)' : 'none',
+        background: '#111111',
+        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : '1px solid transparent',
+        boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.4)' : 'none',
         transition: 'all 0.3s ease',
       }}
     >
@@ -54,22 +52,22 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: '#0A0A0A' }}>
+          <div className="w-8 h-8 rounded flex items-center justify-center flex-shrink-0" style={{ background: '#CC1416' }}>
             <span className="text-xs font-bold text-white">DE</span>
           </div>
-          <span className="font-bold text-sm tracking-tight" style={{ color: '#0A0A0A' }}>StudyDE</span>
+          <span className="font-bold text-sm text-white" style={{ letterSpacing: '0.01em' }}>StudyDE</span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5">
           {links.map((l) => (
             <button
               key={l.href}
               onClick={() => handleNavLink(l.href)}
-              className="px-4 py-2 text-sm rounded-lg transition-all duration-150"
-              style={{ color: '#666666', background: 'transparent', border: 'none', cursor: 'pointer', fontWeight: 500 }}
-              onMouseEnter={e => { e.target.style.color = '#0A0A0A'; e.target.style.background = '#F5F5F5' }}
-              onMouseLeave={e => { e.target.style.color = '#666666'; e.target.style.background = 'transparent' }}
+              className="px-4 py-2 text-sm rounded transition-all duration-150"
+              style={{ color: 'rgba(255,255,255,0.65)', background: 'transparent', border: 'none', cursor: 'pointer', fontWeight: 500 }}
+              onMouseEnter={e => { e.target.style.color = '#FFFFFF'; e.target.style.background = 'rgba(255,255,255,0.07)' }}
+              onMouseLeave={e => { e.target.style.color = 'rgba(255,255,255,0.65)'; e.target.style.background = 'transparent' }}
             >
               {l.label}
             </button>
@@ -80,8 +78,8 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <button
             onClick={() => handleNavLink('#scholarships')}
-            className="btn-primary text-sm py-2.5 px-5"
-            style={{ borderRadius: '100px', fontSize: '13px' }}
+            className="btn-primary"
+            style={{ fontSize: '13px', padding: '8px 20px', borderRadius: '6px' }}
           >
             Scholarships →
           </button>
@@ -89,11 +87,11 @@ export default function Navbar() {
 
         {/* Mobile button */}
         <button
-          className="lg:hidden p-2 rounded-lg"
-          style={{ background: '#F5F5F5' }}
+          className="lg:hidden p-2 rounded"
+          style={{ background: 'rgba(255,255,255,0.08)' }}
           onClick={() => setOpen(!open)}
         >
-          {open ? <X size={18} color="#0A0A0A" /> : <Menu size={18} color="#0A0A0A" />}
+          {open ? <X size={18} color="#FFFFFF" /> : <Menu size={18} color="#FFFFFF" />}
         </button>
       </div>
 
@@ -106,7 +104,7 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
             className="lg:hidden overflow-hidden"
-            style={{ borderTop: '1px solid #EEEEEE', background: '#FFFFFF' }}
+            style={{ borderTop: '1px solid rgba(255,255,255,0.08)', background: '#111111' }}
           >
             <div className="px-6 py-4 flex flex-col gap-1">
               {links.map((l, i) => (
@@ -116,12 +114,18 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.04 }}
-                  className="py-3 px-3 text-sm font-medium rounded-lg text-left"
-                  style={{ color: '#444444', background: 'transparent', border: 'none', cursor: 'pointer' }}
+                  className="py-3 px-3 text-sm font-medium rounded text-left"
+                  style={{ color: 'rgba(255,255,255,0.7)', background: 'transparent', border: 'none', cursor: 'pointer' }}
                 >
                   {l.label}
                 </motion.button>
               ))}
+              <button
+                onClick={() => handleNavLink('#scholarships')}
+                className="mt-3 btn-primary text-center justify-center"
+              >
+                Scholarships →
+              </button>
             </div>
           </motion.nav>
         )}

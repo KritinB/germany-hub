@@ -189,9 +189,9 @@ export default function Visa() {
               </div>
 
               <div className="mt-5 pt-4 text-xs space-y-2" style={{ borderTop: '1px solid rgba(0,0,0,0.03)', color: 'rgba(0,0,0,0.38)' }}>
-                <p><span className="text-white font-semibold">Visa type:</span> National Visa Type D (Nationales Visum)</p>
-                <p><span className="text-white font-semibold">Validity:</span> Initially 3–6 months, extended as residence permit upon arrival</p>
-                <p><span className="text-white font-semibold">Fee:</span> ~€75 (approximately ₹7,000)</p>
+                <p><span className="font-semibold" style={{ color: '#1A1A1A' }}>Visa type:</span> National Visa Type D (Nationales Visum)</p>
+                <p><span className="font-semibold" style={{ color: '#1A1A1A' }}>Validity:</span> Initially 3–6 months, extended as residence permit upon arrival</p>
+                <p><span className="font-semibold" style={{ color: '#1A1A1A' }}>Fee:</span> ~€75 (approximately ₹7,000)</p>
               </div>
             </motion.div>
           </div>
@@ -208,7 +208,7 @@ export default function Visa() {
           <Link
             to="/visa"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-            style={{ background: '#0A0A0A', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
+            style={{ background: '#CC1416', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(204,20,22,0.25)' }}
           >
             Full Visa Guide — Rejections, Extensions & Post-Arrival <ArrowRight size={15} />
           </Link>

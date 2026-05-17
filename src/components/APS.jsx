@@ -213,7 +213,7 @@ export default function APS() {
               <div key={i} className="rounded-xl p-4" style={{ background: 'rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.03)' }}>
                 <div className="flex items-center gap-2 mb-2">
                   <MapPin size={14} color="#0A0A0A" />
-                  <span className="font-semibold text-white text-sm">{o.city}</span>
+                  <span className="font-semibold text-sm" style={{ color: '#1A1A1A' }}>{o.city}</span>
                 </div>
                 <p className="text-xs mb-2" style={{ color: 'rgba(0,0,0,0.4)' }}>{o.address}</p>
                 <div className="text-xs px-2 py-1 rounded-md" style={{ background: 'rgba(0,0,0,0.03)', color: '#0A0A0A' }}>{o.note}</div>
@@ -233,7 +233,7 @@ export default function APS() {
           <Link
             to="/aps"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-            style={{ background: '#0A0A0A', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
+            style={{ background: '#CC1416', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(204,20,22,0.25)' }}
           >
             Full APS Guide — FAQs, Tips & Timeline <ArrowRight size={15} />
           </Link>

@@ -195,7 +195,7 @@ export default function Scholarships() {
           <Link
             to="/scholarships"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300"
-            style={{ background: '#0A0A0A', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}
+            style={{ background: '#CC1416', color: '#FFFFFF', boxShadow: '0 4px 16px rgba(204,20,22,0.25)' }}
           >
             Full Scholarship Guide — Applications, SOPs & Deadlines <ArrowRight size={15} />
           </Link>
