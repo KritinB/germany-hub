@@ -49,17 +49,19 @@ function HomePage() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/aps" element={<APSPage />} />
-      <Route path="/finances" element={<FinancesPage />} />
-      <Route path="/visa" element={<VisaPage />} />
-      <Route path="/life" element={<LifePage />} />
-      <Route path="/why-germany" element={<WhyGermanyPage />} />
-      <Route path="/programs/:type" element={<ProgramPage />} />
-      <Route path="/universities/:abbr" element={<UniversityPage />} />
-      <Route path="/scholarships" element={<ScholarshipsPage />} />
-    </Routes>
-    <Analytics />
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/aps" element={<APSPage />} />
+        <Route path="/finances" element={<FinancesPage />} />
+        <Route path="/visa" element={<VisaPage />} />
+        <Route path="/life" element={<LifePage />} />
+        <Route path="/why-germany" element={<WhyGermanyPage />} />
+        <Route path="/programs/:type" element={<ProgramPage />} />
+        <Route path="/universities/:abbr" element={<UniversityPage />} />
+        <Route path="/scholarships" element={<ScholarshipsPage />} />
+      </Routes>
+      <Analytics />
+    </>
   )
 }
