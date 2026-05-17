@@ -38,9 +38,12 @@ git add . && git commit -m "message" && git push
 - Site built and deployed
 - GitHub connected with auto-deploy via Vercel
 - Vercel Analytics enabled
-- SEO fully set up (meta tags, sitemap, robots.txt, Google Search Console)
+- SEO fully set up (meta tags, sitemap, robots.txt, Google Search Console verified)
+- Contact/enquiry form built using Formspree (https://formspree.io/f/meedjyqn) — sends submissions directly to kritinbysani555@gmail.com
+- Caffeine app installed on Mac to prevent sleep during long tasks
+- CLAUDE.md and memory files set up for persistent context across sessions
 
 ## Pending / ideas
-- Contact/enquiry form (attempted with EmailJS and Web3Forms, skipped for now)
 - User accounts + progress tracking (Supabase — not needed yet)
 - Custom domain (not needed yet)
+- Add Contact link to Navbar
