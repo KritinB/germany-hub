@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, Heart } from 'lucide-react'
+import { ExternalLink, Heart, Map } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const links = {
   'Official Resources': [
@@ -54,25 +55,23 @@ export default function Footer() {
             The earlier you apply, the better your chances.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a
-              href="#aps"
-              className="px-7 py-3.5 rounded-full font-semibold text-sm transition-all duration-200"
+            <Link
+              to="/journey"
+              className="flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm transition-all duration-200"
               style={{ background: '#FFFFFF', color: '#0A0A0A' }}
               onMouseEnter={e => { e.currentTarget.style.opacity = '0.9' }}
               onMouseLeave={e => { e.currentTarget.style.opacity = '1' }}
             >
-              Start APS Process →
-            </a>
+              <Map size={14} /> View Full Roadmap
+            </Link>
             <a
-              href="https://www.daad.in"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#aps"
               className="flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm transition-all duration-200"
               style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.2)' }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)'; e.currentTarget.style.color = '#FFFFFF' }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)' }}
             >
-              Explore DAAD Scholarships <ExternalLink size={13} />
+              Start APS Process →
             </a>
           </div>
         </motion.div>

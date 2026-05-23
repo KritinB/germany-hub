@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, MapPin, Home, Search, AlertTriangle, Heart, Coffee, ShoppingBag } from 'lucide-react'
@@ -96,6 +97,7 @@ const indianCommunity = [
 ]
 
 export default function LifePage() {
+  useEffect(() => { document.title = 'Life in Germany Guide — StudyDE' }, [])
   return (
     <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
       <Navbar />

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, Landmark, Home, UtensilsCrossed, Bus, ShieldCheck, ShoppingBag, Briefcase, TrendingUp, PiggyBank, CreditCard, AlertTriangle } from 'lucide-react'
@@ -55,6 +56,7 @@ const remittance = [
 ]
 
 export default function FinancesPage() {
+  useEffect(() => { document.title = 'Finance Guide — Blocked Account, Budget & Banking | StudyDE' }, [])
   return (
     <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
       <Navbar />

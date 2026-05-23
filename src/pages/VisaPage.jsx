@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, AlertTriangle, CheckCircle2, XCircle, Clock, Home, Stamp } from 'lucide-react'
@@ -34,6 +35,7 @@ const residencePermitInfo = [
 ]
 
 export default function VisaPage() {
+  useEffect(() => { document.title = 'Student Visa Guide — StudyDE' }, [])
   return (
     <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
       <Navbar />

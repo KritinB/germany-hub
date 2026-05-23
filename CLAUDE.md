@@ -42,8 +42,14 @@ git add . && git commit -m "message" && git push
 - Contact/enquiry form built using Formspree (https://formspree.io/f/meedjyqn) — sends submissions directly to kritinbysani555@gmail.com
 - Caffeine app installed on Mac to prevent sleep during long tasks
 - CLAUDE.md and memory files set up for persistent context across sessions
+- Contact link added to Navbar
+- Per-page document.title set on all 8 detail pages (SEO)
+- Journey page created at /journey — complete India-to-Germany study roadmap (7 phases, 42 steps)
+- Hero CTA updated to link to Journey page; Footer updated too
+- Hero announcements updated to 2026-27 cycle
+- APS fee year label updated to 2025–26
 
 ## Pending / ideas
 - User accounts + progress tracking (Supabase — not needed yet)
 - Custom domain (not needed yet)
-- Add Contact link to Navbar
+- Update sitemap.xml to include /journey route

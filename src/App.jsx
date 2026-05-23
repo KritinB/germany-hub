@@ -21,6 +21,7 @@ import WhyGermanyPage from './pages/WhyGermanyPage'
 import ProgramPage from './pages/ProgramPage'
 import UniversityPage from './pages/UniversityPage'
 import ScholarshipsPage from './pages/ScholarshipsPage'
+import JourneyPage from './pages/JourneyPage'
 
 function HomePage() {
   return (
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/programs/:type" element={<ProgramPage />} />
         <Route path="/universities/:abbr" element={<UniversityPage />} />
         <Route path="/scholarships" element={<ScholarshipsPage />} />
+        <Route path="/journey" element={<JourneyPage />} />
       </Routes>
       <Analytics />
     </>

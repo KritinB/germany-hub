@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { ArrowLeft, MapPin, Globe, Users, Star, ExternalLink, BookOpen, ChevronRight } from 'lucide-react'
@@ -155,6 +156,10 @@ export default function UniversityPage() {
   const { abbr } = useParams()
   const uni = universities.find(u => u.abbr.toLowerCase().replace(/\s+/g, '-') === abbr)
   const details = universityDetails[abbr]
+
+  useEffect(() => {
+    if (uni) document.title = `${uni.name} — StudyDE`
+  }, [uni])
 
   if (!uni || !details) return <Navigate to="/" replace />
 

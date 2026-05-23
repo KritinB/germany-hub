@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, FileText, MapPin, Clock, CreditCard, AlertCircle, ExternalLink, CheckCircle2, XCircle, HelpCircle, Lightbulb } from 'lucide-react'
@@ -50,6 +51,7 @@ const timeline = [
 ]
 
 export default function APSPage() {
+  useEffect(() => { document.title = 'APS Certificate Guide — StudyDE' }, [])
   return (
     <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
       <Navbar />

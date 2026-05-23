@@ -26,7 +26,7 @@ export const steps = [
     title: 'Pay the Fee',
     desc: 'Pay the APS fee online through the portal. The fee is non-refundable. Keep the payment receipt carefully as it\'s required at the appointment.',
     details: [
-      'Fee: ~₹18,500 (2024–25)',
+      'Fee: ~₹18,500 (2025–26)',
       'Online payment via portal',
       'Non-refundable',
       'Save payment confirmation',

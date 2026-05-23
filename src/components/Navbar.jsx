@@ -11,6 +11,7 @@ const links = [
   { label: 'Finances', href: '#finances' },
   { label: 'Visa', href: '#visa' },
   { label: 'Life in DE', href: '#life' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {

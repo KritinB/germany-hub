@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, Award, ExternalLink, Calendar, DollarSign, Users, CheckCircle2, FileText, Clock, Lightbulb } from 'lucide-react'
@@ -63,6 +64,7 @@ const sopStructure = [
 ]
 
 export default function ScholarshipsPage() {
+  useEffect(() => { document.title = 'Scholarships for Indian Students in Germany — StudyDE' }, [])
   return (
     <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
       <Navbar />

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowLeft, TrendingUp, Award, Globe2, BarChart2 } from 'lucide-react'
@@ -57,6 +58,7 @@ const expandedReasons = {
 }
 
 export default function WhyGermanyPage() {
+  useEffect(() => { document.title = 'Why Study in Germany — StudyDE' }, [])
   return (
     <div style={{ background: '#F8FAFC', minHeight: '100vh' }}>
       <Navbar />

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { ArrowLeft, BookOpen, Clock, CheckCircle2, Award, ChevronRight, FileText, Users, Globe } from 'lucide-react'
@@ -90,6 +91,10 @@ export default function ProgramPage() {
   const { type } = useParams()
   const prog = programs.find(p => p.id === type)
   const guide = applicationGuide[type]
+
+  useEffect(() => {
+    if (prog) document.title = `${prog.title} in Germany — StudyDE`
+  }, [prog])
 
   if (!prog || !guide) return <Navigate to="/" replace />
 

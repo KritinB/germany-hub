@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, ChevronRight } from 'lucide-react'
+import { ArrowRight, ChevronRight, Map } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const words = ["Bachelor's", "Master's", 'PhD']
 
@@ -29,9 +30,9 @@ const stats = [
 ]
 
 const announcements = [
-  'APS applications for 2025–26 are now open — apply at aps-india.de',
-  'DAAD scholarship deadline: October 2025 — start your application now',
-  'Winter Semester 2025 applications: most universities open December–July',
+  'APS applications for 2026–27 are now open — apply at aps-india.de',
+  'DAAD scholarship deadline: October 2026 — start your application now',
+  'Winter Semester 2026 applications: most universities open December–July',
 ]
 
 export default function Hero() {
@@ -155,15 +156,15 @@ export default function Hero() {
           <a href="#why" className="btn-primary" style={{ fontSize: '15px', padding: '14px 28px' }}>
             Start Exploring <ArrowRight size={16} />
           </a>
-          <a
-            href="#aps"
+          <Link
+            to="/journey"
             className="btn-secondary"
             style={{ fontSize: '15px', padding: '13px 28px', color: 'rgba(255,255,255,0.75)', borderColor: 'rgba(255,255,255,0.2)' }}
             onMouseEnter={e => { e.currentTarget.style.borderColor = '#CC1416'; e.currentTarget.style.color = '#FFFFFF' }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; e.currentTarget.style.color = 'rgba(255,255,255,0.75)' }}
           >
-            APS Certificate Guide
-          </a>
+            <Map size={15} /> Full Journey Roadmap
+          </Link>
         </motion.div>
 
         {/* Stats grid */}
